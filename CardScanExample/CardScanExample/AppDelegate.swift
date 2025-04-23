@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        ScanViewController.configure(apiKey: "SP-wehkNs6BHT7aVv-ASxAH5YuTyEXX6")
+//        ScanViewController.configure(apiKey: "SP-wehkNs6BHT7aVv-ASxAH5YuTyEXX6")
         return true
     }
 

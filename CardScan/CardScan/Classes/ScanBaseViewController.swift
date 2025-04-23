@@ -84,11 +84,11 @@ public protocol TestingImageDataSource: AnyObject {
         }
     }
     
-    @objc static public func configure(apiKey: String? = nil) {
-        if let apiKey = apiKey {
-            ApiClient.apiKey = apiKey
-        }
-    }
+//    @objc static public func configure(apiKey: String? = nil) {
+//        if let apiKey = apiKey {
+//            ApiClient.apiKey = apiKey
+//        }
+//    }
     
     @objc public static func supportedOrientationMaskOrDefault() -> UIInterfaceOrientationMask {
         guard ScanBaseViewController.isAppearing else {
@@ -164,13 +164,13 @@ public protocol TestingImageDataSource: AnyObject {
         
         if (self.sendScanStats) {
             let scanStatsPayload = ocrMainLoop.scanStats.createPayload()
-            ScanApi.uploadScanStats(payload: scanStatsPayload, completion: { response, error in
-                guard let status = response?.status, status == "ok" else {
-                    return
-                }
-                
-                ScanStats.lastScanStatsSuccess = Date()
-            })
+//            ScanApi.uploadScanStats(payload: scanStatsPayload, completion: { response, error in
+//                guard let status = response?.status, status == "ok" else {
+//                    return
+//                }
+//                
+//                ScanStats.lastScanStatsSuccess = Date()
+//            })
         }
     }
      
@@ -410,13 +410,13 @@ public protocol TestingImageDataSource: AnyObject {
         if (self.sendScanStats) {
             // fire and forget
             let scanStatsPayload = self.ocrMainLoop()?.scanStats.createPayload() ?? ScanStats().createPayload()
-            ScanApi.uploadScanStats(payload: scanStatsPayload, completion: { response, error in
-                guard let status = response?.status, status == "ok" else {
-                    return
-                }
-                
-                ScanStats.lastScanStatsSuccess = Date()
-            })
+//            ScanApi.uploadScanStats(payload: scanStatsPayload, completion: { response, error in
+//                guard let status = response?.status, status == "ok" else {
+//                    return
+//                }
+//                
+//                ScanStats.lastScanStatsSuccess = Date()
+//            })
         }
         self.onScannedCard(number: creditCardOcrResult.number, expiryYear: creditCardOcrResult.expiryYear, expiryMonth: creditCardOcrResult.expiryMonth, scannedImage: scannedCardImage)
     }
