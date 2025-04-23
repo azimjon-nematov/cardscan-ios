@@ -21,9 +21,9 @@ public struct UxFrameConfidenceValues {
         self.uxNoCard = uxNoCard
     }
     
-    public func toArray() -> [Double] {
-        return [hasOcr ? 1.0 : 0.0, uxPan, uxNoPan, uxNoCard]
-    }
+//    public func toArray() -> [Double] {
+//        return [hasOcr ? 1.0 : 0.0, uxPan, uxNoPan, uxNoCard]
+//    }
 }
 
 public enum CenteredCardState {

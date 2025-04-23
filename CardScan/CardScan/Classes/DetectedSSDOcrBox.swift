@@ -1,9 +1,3 @@
-//
-//  DetectedSSDOcrBox.swift
-//  CardScan
-//
-//  Created by xaen on 3/22/20.
-//
 import CoreGraphics
 import Foundation
 
@@ -24,10 +18,5 @@ struct DetectedSSDOcrBox {
         self.confidence = conf
         self.rect = CGRect(x: XMin_, y: YMin_, width: XMax_ - XMin_, height: YMax_ - YMin_)
         self.imgSize = imageSize
-    }
-    
-     func toDict() -> [String: Any] {
-        
-        return ["":""]
     }
 }
