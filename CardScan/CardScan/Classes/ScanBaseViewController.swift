@@ -163,7 +163,7 @@ public protocol TestingImageDataSource: AnyObject {
         ocrMainLoop.userCancelled()
         
         if (self.sendScanStats) {
-            let scanStatsPayload = ocrMainLoop.scanStats.createPayload()
+//            let scanStatsPayload = ocrMainLoop.scanStats.createPayload()
 //            ScanApi.uploadScanStats(payload: scanStatsPayload, completion: { response, error in
 //                guard let status = response?.status, status == "ok" else {
 //                    return
@@ -409,7 +409,7 @@ public protocol TestingImageDataSource: AnyObject {
 
         if (self.sendScanStats) {
             // fire and forget
-            let scanStatsPayload = self.ocrMainLoop()?.scanStats.createPayload() ?? ScanStats().createPayload()
+//            let scanStatsPayload = self.ocrMainLoop()?.scanStats.createPayload() ?? ScanStats().createPayload()
 //            ScanApi.uploadScanStats(payload: scanStatsPayload, completion: { response, error in
 //                guard let status = response?.status, status == "ok" else {
 //                    return

@@ -71,15 +71,8 @@
 		3B20EE4A258655DC00CBF05E /* CardScan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B20EE45258655DC00CBF05E /* CardScan.storyboard */; };
 		3B20EE54258658F900CBF05E /* SSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EE53258658F900CBF05E /* SSD.swift */; };
 		3B9F1588259C1F4C00881C1B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B9F158A259C1F4C00881C1B /* Localizable.strings */; };
-		F374F07E263B5AA50062F735 /* DevicePayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = F374F07D263B5AA50062F735 /* DevicePayload.swift */; };
 		F38B48B72673FBBB002CFB22 /* CGrect+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B48B62673FBBB002CFB22 /* CGrect+utils.swift */; };
 		F38B48B92673FD0C002CFB22 /* Array+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B48B82673FD0C002CFB22 /* Array+utils.swift */; };
-		F3EEF433262E5E770022FBAC /* AppInfoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EEF430262E5E470022FBAC /* AppInfoUtils.swift */; };
-		F3EEF434262E5E770022FBAC /* DeviceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EEF431262E5E470022FBAC /* DeviceUtils.swift */; };
-		F3EEF43D262E60DA0022FBAC /* ScanStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EEF43A262E60DA0022FBAC /* ScanStatistics.swift */; };
-		F3EEF44C262F84510022FBAC /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EEF44B262F84510022FBAC /* ApiRequest.swift */; };
-		F3EEF451262F86A30022FBAC /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EEF450262F86A30022FBAC /* ApiClient.swift */; };
-		F3EEF46F262F9E100022FBAC /* ScanApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EEF46E262F9E100022FBAC /* ScanApi.swift */; };
 		F3FB36702640BEC10010382C /* CardScan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B20ED9C2586539600CBF05E /* CardScan.framework */; };
 /* End PBXBuildFile section */
 
@@ -174,15 +167,8 @@
 		3B9F1597259C200100881C1B /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B9F1598259C200700881C1B /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B9F1599259C201600881C1B /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
-		F374F07D263B5AA50062F735 /* DevicePayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicePayload.swift; sourceTree = "<group>"; };
 		F38B48B62673FBBB002CFB22 /* CGrect+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGrect+utils.swift"; sourceTree = "<group>"; };
 		F38B48B82673FD0C002CFB22 /* Array+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+utils.swift"; sourceTree = "<group>"; };
-		F3EEF430262E5E470022FBAC /* AppInfoUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoUtils.swift; sourceTree = "<group>"; };
-		F3EEF431262E5E470022FBAC /* DeviceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceUtils.swift; sourceTree = "<group>"; };
-		F3EEF43A262E60DA0022FBAC /* ScanStatistics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanStatistics.swift; sourceTree = "<group>"; };
-		F3EEF44B262F84510022FBAC /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
-		F3EEF450262F86A30022FBAC /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
-		F3EEF46E262F9E100022FBAC /* ScanApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanApi.swift; sourceTree = "<group>"; };
 		F3FB366B2640BEC10010382C /* CardScanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardScanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -236,8 +222,6 @@
 		3B20EDB22586550600CBF05E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				F3EEF438262E60DA0022FBAC /* Api */,
-				F3EEF42F262E5E470022FBAC /* Utils */,
 				3B20EDB42586550600CBF05E /* ActiveStateComputation.swift */,
 				3B20EDCA2586550600CBF05E /* API.swift */,
 				3B20EDEB2586550600CBF05E /* AppleOcr */,
@@ -344,35 +328,6 @@
 				3B20EE44258655DC00CBF05E /* card_types.txt */,
 			);
 			path = Config;
-			sourceTree = "<group>";
-		};
-		F3EEF42F262E5E470022FBAC /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				F3EEF430262E5E470022FBAC /* AppInfoUtils.swift */,
-				F3EEF431262E5E470022FBAC /* DeviceUtils.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		F3EEF438262E60DA0022FBAC /* Api */ = {
-			isa = PBXGroup;
-			children = (
-				F3EEF471262F9E580022FBAC /* DTO */,
-				F3EEF44B262F84510022FBAC /* ApiRequest.swift */,
-				F3EEF450262F86A30022FBAC /* ApiClient.swift */,
-				F3EEF46E262F9E100022FBAC /* ScanApi.swift */,
-			);
-			path = Api;
-			sourceTree = "<group>";
-		};
-		F3EEF471262F9E580022FBAC /* DTO */ = {
-			isa = PBXGroup;
-			children = (
-				F374F07D263B5AA50062F735 /* DevicePayload.swift */,
-				F3EEF43A262E60DA0022FBAC /* ScanStatistics.swift */,
-			);
-			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,20 +455,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3EEF433262E5E770022FBAC /* AppInfoUtils.swift in Sources */,
-				F3EEF434262E5E770022FBAC /* DeviceUtils.swift in Sources */,
 				3B20EE1D2586550600CBF05E /* ScanEventsProtocol.swift in Sources */,
 				3B20EE152586550600CBF05E /* SimpleScanViewController.swift in Sources */,
 				3B20EE082586550600CBF05E /* API.swift in Sources */,
-				F3EEF44C262F84510022FBAC /* ApiRequest.swift in Sources */,
 				3B20EE062586550600CBF05E /* DetectedAllBoxes.swift in Sources */,
 				F38B48B92673FD0C002CFB22 /* Array+utils.swift in Sources */,
 				3B20EE132586550600CBF05E /* Torch.swift in Sources */,
 				3B20EE162586550600CBF05E /* CardNetwork.swift in Sources */,
 				3B20EDF22586550600CBF05E /* VideoFeed.swift in Sources */,
-				F374F07E263B5AA50062F735 /* DevicePayload.swift in Sources */,
 				3B20EE0D2586550600CBF05E /* AppState.swift in Sources */,
-				F3EEF43D262E60DA0022FBAC /* ScanStatistics.swift in Sources */,
 				3B20EE1B2586550600CBF05E /* PredictionUtilOcr.swift in Sources */,
 				3B20EE0E2586550600CBF05E /* UIImage+pixelBuffer.swift in Sources */,
 				3B20EE222586550600CBF05E /* DetectedSSDOcrBox.swift in Sources */,
@@ -537,7 +487,6 @@
 				3B20EE212586550600CBF05E /* ScanBaseViewController.swift in Sources */,
 				3B20EE172586550600CBF05E /* CardType.swift in Sources */,
 				3B20EDF42586550600CBF05E /* OcrObject.swift in Sources */,
-				F3EEF451262F86A30022FBAC /* ApiClient.swift in Sources */,
 				3B20EDFB2586550600CBF05E /* MainLoopStateMachine.swift in Sources */,
 				3B20EE012586550600CBF05E /* Expiry.swift in Sources */,
 				3B20EE2A2586550600CBF05E /* PredictionAPI.swift in Sources */,
@@ -550,7 +499,6 @@
 				3B20EE232586550600CBF05E /* CreditCardOcrPrediction+expiry.swift in Sources */,
 				3B20EE112586550600CBF05E /* DetectedSSDBox.swift in Sources */,
 				3B20EE2B2586550600CBF05E /* SSDOcr.mlmodel in Sources */,
-				F3EEF46F262F9E100022FBAC /* ScanApi.swift in Sources */,
 				3B20EE182586550600CBF05E /* CornerView.swift in Sources */,
 				3B20EE282586550600CBF05E /* AppleOcr.swift in Sources */,
 				3B20EE1F2586550600CBF05E /* SSDOutputExtensions.swift in Sources */,
