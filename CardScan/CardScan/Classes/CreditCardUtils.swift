@@ -1,6 +1,5 @@
 import Foundation
 
-@available(*, deprecated, message: "Replaced by stripe card scan. See https://github.com/stripe/stripe-ios/tree/master/StripeCardScan")
 public struct CreditCardUtils {
     static let maxCvvLength = 3
     static let maxCvvLengthAmex = 4
@@ -389,7 +388,6 @@ public struct CreditCardUtils {
 }
 
 //TODO: Added extension to make older network changes available, will remove in future version
-@available(*, deprecated, message: "Replaced by stripe card scan. See https://github.com/stripe/stripe-ios/tree/master/StripeCardScan")
 extension CreditCardUtils {
     public static func isVisa(number: String) -> Bool {
         return determineCardNetwork(cardNumber: number) == CardNetwork.VISA

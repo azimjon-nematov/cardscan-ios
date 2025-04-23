@@ -7,7 +7,6 @@
 
 import Foundation
 
-@available(*, deprecated, message: "Replaced by stripe card scan. See https://github.com/stripe/stripe-ios/tree/master/StripeCardScan")
 public class CSBundle {
     // If you change the bundle name make sure to set these before
     // initializing the library

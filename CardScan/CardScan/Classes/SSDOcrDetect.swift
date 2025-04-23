@@ -14,7 +14,6 @@ import UIKit
  */
 
 @available(iOS 11.2, *)
-@available(*, deprecated, message: "Replaced by stripe card scan. See https://github.com/stripe/stripe-ios/tree/master/StripeCardScan")
 struct SSDOcrDetect {
     var ssdOcrModel: SSDOcr? = nil
     static var priors: [CGRect]? = nil

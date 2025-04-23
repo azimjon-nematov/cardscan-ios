@@ -7,7 +7,6 @@
 
 import Foundation
 
-@available(*, deprecated, message: "Replaced by stripe card scan. See https://github.com/stripe/stripe-ios/tree/master/StripeCardScan")
 public class MachineLearningResult {
     let duration: Double
     let frames: Int

@@ -8,7 +8,6 @@
 
 import Foundation
 
-@available(*, deprecated, message: "Replaced by stripe card scan. See https://github.com/stripe/stripe-ios/tree/master/StripeCardScan")
 struct NameWords {
     static let blacklist: Set = ["customer", "debit", "visa", "mastercard", "navy", "american", "express", "thru", "good",
                                  "authorized", "signature", "wells", "navy", "credit", "federal",

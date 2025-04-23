@@ -9,7 +9,6 @@ import Foundation
 import Accelerate
 
 @available(iOS 11.2, *)
-@available(*, deprecated, message: "Replaced by stripe card scan. See https://github.com/stripe/stripe-ios/tree/master/StripeCardScan")
 extension SSDOutput{
 
 

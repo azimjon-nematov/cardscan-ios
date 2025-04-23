@@ -1,7 +1,6 @@
 import Foundation
 import AVFoundation
 
-@available(*, deprecated, message: "Replaced by stripe card scan. See https://github.com/stripe/stripe-ios/tree/master/StripeCardScan")
 struct Torch {
     enum State {
         case off

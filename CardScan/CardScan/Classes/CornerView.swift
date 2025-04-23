@@ -1,6 +1,5 @@
 import UIKit
 
-@available(*, deprecated, message: "Replaced by stripe card scan. See https://github.com/stripe/stripe-ios/tree/master/StripeCardScan")
 public class CornerView: UIView {
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

@@ -58,14 +58,12 @@ import UIKit
  */
 
 @available(iOS 11.2, *)
-@available(*, deprecated, message: "Replaced by stripe card scan. See https://github.com/stripe/stripe-ios/tree/master/StripeCardScan")
 @objc public protocol SimpleScanDelegate {
     @objc func userDidCancelSimple(_ scanViewController: SimpleScanViewController)
     @objc func userDidScanCardSimple(_ scanViewController: SimpleScanViewController, creditCard: CreditCard)
 }
 
 @available(iOS 11.2, *)
-@available(*, deprecated, message: "Replaced by stripe card scan. See https://github.com/stripe/stripe-ios/tree/master/StripeCardScan")
 @objc open class SimpleScanViewController: ScanBaseViewController {
 
     // used by ScanBase
@@ -423,7 +421,6 @@ import UIKit
     }
 }
 
-@available(*, deprecated, message: "Replaced by stripe card scan. See https://github.com/stripe/stripe-ios/tree/master/StripeCardScan")
 public extension UIView {
     func setAnchorsEqual(to otherView: UIView) {
         self.topAnchor.constraint(equalTo: otherView.topAnchor).isActive = true

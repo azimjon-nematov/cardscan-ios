@@ -7,7 +7,6 @@
 
 import Foundation
 
-@available(*, deprecated, message: "Replaced by stripe card scan. See https://github.com/stripe/stripe-ios/tree/master/StripeCardScan")
 @objc public enum CardNetwork: Int {
     case VISA
     case MASTERCARD

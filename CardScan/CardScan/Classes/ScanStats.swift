@@ -8,7 +8,6 @@ import CoreGraphics
 import Foundation
 import UIKit
 
-@available(*, deprecated, message: "Replaced by stripe card scan. See https://github.com/stripe/stripe-ios/tree/master/StripeCardScan")
 public struct ScanStats {
     var startTime = Date()
     public var scans = 0

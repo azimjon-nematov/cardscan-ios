@@ -32,7 +32,6 @@
 import Foundation
 import UIKit
 
-@available(*, deprecated, message: "Replaced by stripe card scan. See https://github.com/stripe/stripe-ios/tree/master/StripeCardScan")
 public class ActiveStateComputation {
     let queue: DispatchQueue
     var pendingComputations: [() -> Void] = []
