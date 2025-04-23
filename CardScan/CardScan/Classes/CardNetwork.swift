@@ -18,17 +18,17 @@ import Foundation
     case REGIONAL
     case UNKNOWN
     
-    public func toString() -> String {
-        switch self {
-        case .VISA: return "Visa"
-        case .MASTERCARD: return "MasterCard"
-        case .AMEX: return "Amex"
-        case .DISCOVER: return "Discover"
-        case .UNIONPAY: return "Union Pay"
-        case .JCB: return "Jcb"
-        case .DINERSCLUB: return "Diners Club"
-        case .REGIONAL: return "Regional"
-        case .UNKNOWN: return "Unknown"
-        }
-    }
+//    public func toString() -> String {
+//        switch self {
+//        case .VISA: return "Visa"
+//        case .MASTERCARD: return "MasterCard"
+//        case .AMEX: return "Amex"
+//        case .DISCOVER: return "Discover"
+//        case .UNIONPAY: return "Union Pay"
+//        case .JCB: return "Jcb"
+//        case .DINERSCLUB: return "Diners Club"
+//        case .REGIONAL: return "Regional"
+//        case .UNKNOWN: return "Unknown"
+//        }
+//    }
 }

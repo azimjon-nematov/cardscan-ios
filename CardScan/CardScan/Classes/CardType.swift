@@ -13,14 +13,14 @@ import Foundation
     case PREPAID
     case UNKNOWN
     
-    public func toString() -> String {
-        switch self {
-        case .CREDIT: return "Credit"
-        case .DEBIT: return "Debit"
-        case .PREPAID: return "Prepaid"
-        case .UNKNOWN: return "Unknown"
-        }
-    }
+//    public func toString() -> String {
+//        switch self {
+//        case .CREDIT: return "Credit"
+//        case .DEBIT: return "Debit"
+//        case .PREPAID: return "Prepaid"
+//        case .UNKNOWN: return "Unknown"
+//        }
+//    }
     
     public static func fromString(_ str: String) -> CardType {
         switch str.lowercased() {
