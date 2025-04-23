@@ -755,7 +755,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0.0001;
-				PRODUCT_BUNDLE_IDENTIFIER = com.getbouncer.CardScan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itservice.CardScan;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -780,7 +780,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0.0001;
-				PRODUCT_BUNDLE_IDENTIFIER = com.getbouncer.CardScan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itservice.CardScan;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
