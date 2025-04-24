@@ -53,19 +53,19 @@ public struct ScanStats {
         self.deviceType = deviceType
     }
     
-    public func toDictionaryForAnalytics() -> [String: Any] {
-        return ["scans": self.scans,
-                "cards_detected": self.cardsDetected,
-                "torch_on": self.torchOn,
-                "orientation": self.orientation,
-                "success": self.success ?? false,
-                "duration": self.duration(),
-                "model": self.model ?? "unknown",
-                "permission_granted": self.permissionGranted.map { $0 ? "granted" : "denied" } ?? "not_determined",
-                "device_type": self.deviceType ?? "",
-                "user_canceled": self.userCanceled]
-    }
-    
+//    public func toDictionaryForAnalytics() -> [String: Any] {
+//        return ["scans": self.scans,
+//                "cards_detected": self.cardsDetected,
+//                "torch_on": self.torchOn,
+//                "orientation": self.orientation,
+//                "success": self.success ?? false,
+//                "duration": self.duration(),
+//                "model": self.model ?? "unknown",
+//                "permission_granted": self.permissionGranted.map { $0 ? "granted" : "denied" } ?? "not_determined",
+//                "device_type": self.deviceType ?? "",
+//                "user_canceled": self.userCanceled]
+//    }
+//
 //    func createPayload() -> ScanStatisticsPayload {
 //        let scanStats = ScanStatistics(
 //            scans: self.scans,
