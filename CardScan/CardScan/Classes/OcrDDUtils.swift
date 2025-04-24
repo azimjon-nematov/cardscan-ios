@@ -14,9 +14,9 @@ struct OcrDDUtils {
     static let numOfQuickReadDigits = 16
     static let numOfQuickReadDigitsPerGroup = 4
     
-    static func isQuickRead(allBoxes: DetectedAllOcrBoxes) -> Bool {
+    static func isQuickRead(allBoxes: [DetectedSSDOcrBox]) -> Bool {
         
-        if (allBoxes.allBoxes.isEmpty) || (allBoxes.allBoxes.count != numOfQuickReadDigits) {
+        if (allBoxes.isEmpty) || (allBoxes.count != numOfQuickReadDigits) {
             return false
         }
         
@@ -24,9 +24,9 @@ struct OcrDDUtils {
         var boxHeights = [Float]()
         var aggregateDeviation: Float = 0
         
-        for idx in 0..<allBoxes.allBoxes.count {
-            boxCenters.append(Float((allBoxes.allBoxes[idx].rect.midY)))
-            boxHeights.append(abs(Float(allBoxes.allBoxes[idx].rect.height)))
+        for idx in 0..<allBoxes.count {
+            boxCenters.append(Float((allBoxes[idx].rect.midY)))
+            boxHeights.append(abs(Float(allBoxes[idx].rect.height)))
         }
         
         let medianYCenter = boxCenters.sorted(by: <)[boxCenters.count / 2]
@@ -37,7 +37,7 @@ struct OcrDDUtils {
         }
         
         if (aggregateDeviation > offsetQuickRead * medianHeight) {
-            let quickReadGroups = allBoxes.allBoxes
+            let quickReadGroups = allBoxes
                 .sorted(by: { return $0.rect.centerY() < $1.rect.centerY() })
                 .chunked(into: 4)
                 .map { $0.sorted(by: { return $0.rect.centerX() < $1.rect.centerX() }) }
@@ -58,15 +58,15 @@ struct OcrDDUtils {
         return false
     }
     
-    static func processQuickRead(allBoxes: DetectedAllOcrBoxes) -> (String, [CGRect])? {
+    static func processQuickRead(allBoxes: [DetectedSSDOcrBox]) -> (String, [CGRect])? {
         
-        if (allBoxes.allBoxes.count != numOfQuickReadDigits){
+        if (allBoxes.count != numOfQuickReadDigits){
             return nil
         }
         
         var _cardNumber: String = ""
         var boxes: [CGRect] = []
-        let sortedBoxes = allBoxes.allBoxes.sorted(by: { (left, right) -> Bool in
+        let sortedBoxes = allBoxes.sorted(by: { (left, right) -> Bool in
             let leftAverageY = (left.rect.minY / 2 + left.rect.maxY / 2)
             let rightAverageY = (right.rect.minY / 2 + right.rect.maxY / 2)
             return  leftAverageY < rightAverageY
@@ -115,9 +115,9 @@ struct OcrDDUtils {
         }
     }
     
-    static func sortAndRemoveFalsePositives(allBoxes: DetectedAllOcrBoxes) -> (String, [CGRect])? {
+    static func sortAndRemoveFalsePositives(allBoxes: [DetectedSSDOcrBox]) -> (String, [CGRect])? {
         
-        if (allBoxes.allBoxes.isEmpty) || (allBoxes.allBoxes.count < minimumCardDigits) {
+        if (allBoxes.isEmpty) || (allBoxes.count < minimumCardDigits) {
             return nil
         }
         
@@ -126,10 +126,10 @@ struct OcrDDUtils {
         var bottomCordinates = [Float]()
         var sortedBoxes = [CGRect]()
         
-        for idx in 0..<allBoxes.allBoxes.count {
-            leftCordinates.append(Float(allBoxes.allBoxes[idx].rect.minX))
-            topCordinates.append(Float(allBoxes.allBoxes[idx].rect.minY))
-            bottomCordinates.append(Float(allBoxes.allBoxes[idx].rect.maxY))
+        for idx in 0..<allBoxes.count {
+            leftCordinates.append(Float(allBoxes[idx].rect.minX))
+            topCordinates.append(Float(allBoxes[idx].rect.minY))
+            bottomCordinates.append(Float(allBoxes[idx].rect.maxY))
         }
         
         let medianYmin = topCordinates.sorted(by: <)[topCordinates.count / 2]
@@ -143,8 +143,8 @@ struct OcrDDUtils {
         var _cardNumber: String = ""
 
         indices.forEach { index in
-            if allBoxes.allBoxes.indices.contains(index) {
-                let box = allBoxes.allBoxes[index]
+            if allBoxes.indices.contains(index) {
+                let box = allBoxes[index]
                 let boxCenter = abs(Float(box.rect.maxY) + Float(box.rect.minY)) / 2
                 let boxHeight = abs(Float(box.rect.maxY) - Float(box.rect.minY))
                 if abs(boxCenter - medianCenter) < medianHeight && boxHeight < falsePositiveTolerance * medianHeight {

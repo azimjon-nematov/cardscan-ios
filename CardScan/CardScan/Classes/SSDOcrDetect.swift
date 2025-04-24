@@ -83,7 +83,7 @@ struct SSDOcrDetect {
     }
     
     mutating func detectOcrObjects(prediction: SSDOcrOutput, image: UIImage) -> String? {
-        var DetectedOcrBoxes = DetectedAllOcrBoxes()
+        var DetectedOcrBoxes = [DetectedSSDOcrBox]()
         
 
         var (scores, boxes, filterArray) = prediction.getScores(filterThreshold: filterThreshold)
@@ -116,7 +116,7 @@ struct SSDOcrDetect {
         )
     
         for idx in 0..<result.pickedBoxes.count {
-            DetectedOcrBoxes.allBoxes.append(
+            DetectedOcrBoxes.append(
                 DetectedSSDOcrBox(
                     category: result.pickedLabels[idx],
                     conf: result.pickedBoxProbs[idx],
@@ -129,8 +129,8 @@ struct SSDOcrDetect {
             )
         }
         
-        if !DetectedOcrBoxes.allBoxes.isEmpty {
-            self.lastDetectedBoxes = DetectedOcrBoxes.getBoundingBoxesOfDigits()
+        if !DetectedOcrBoxes.isEmpty {
+            self.lastDetectedBoxes = DetectedOcrBoxes.map { $0.rect }
         }
         
         if OcrDDUtils.isQuickRead(allBoxes: DetectedOcrBoxes){

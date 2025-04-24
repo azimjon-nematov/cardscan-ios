@@ -25,7 +25,6 @@
 		3B20EDFF2586550600CBF05E /* PriorsGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDC12586550600CBF05E /* PriorsGen.swift */; };
 		3B20EE002586550600CBF05E /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDC22586550600CBF05E /* PreviewView.swift */; };
 		3B20EE012586550600CBF05E /* Expiry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDC32586550600CBF05E /* Expiry.swift */; };
-		3B20EE022586550600CBF05E /* DetectedAllOcrBoxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDC42586550600CBF05E /* DetectedAllOcrBoxes.swift */; };
 		3B20EE032586550600CBF05E /* SsdDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDC52586550600CBF05E /* SsdDetect.swift */; };
 		3B20EE042586550600CBF05E /* CSBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDC62586550600CBF05E /* CSBundle.swift */; };
 		3B20EE052586550600CBF05E /* NMS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDC72586550600CBF05E /* NMS.swift */; };
@@ -107,7 +106,6 @@
 		3B20EDC12586550600CBF05E /* PriorsGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorsGen.swift; sourceTree = "<group>"; };
 		3B20EDC22586550600CBF05E /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		3B20EDC32586550600CBF05E /* Expiry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expiry.swift; sourceTree = "<group>"; };
-		3B20EDC42586550600CBF05E /* DetectedAllOcrBoxes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectedAllOcrBoxes.swift; sourceTree = "<group>"; };
 		3B20EDC52586550600CBF05E /* SsdDetect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SsdDetect.swift; sourceTree = "<group>"; };
 		3B20EDC62586550600CBF05E /* CSBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSBundle.swift; sourceTree = "<group>"; };
 		3B20EDC72586550600CBF05E /* NMS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMS.swift; sourceTree = "<group>"; };
@@ -235,7 +233,6 @@
 				3B20EDD12586550600CBF05E /* CreditCardUtils.swift */,
 				3B20EDC62586550600CBF05E /* CSBundle.swift */,
 				3B20EDC82586550600CBF05E /* DetectedAllBoxes.swift */,
-				3B20EDC42586550600CBF05E /* DetectedAllOcrBoxes.swift */,
 				3B20EDD62586550600CBF05E /* DetectedBox.swift */,
 				3B20EDD32586550600CBF05E /* DetectedSSDBox.swift */,
 				3B20EDE42586550600CBF05E /* DetectedSSDOcrBox.swift */,
@@ -481,7 +478,6 @@
 				3B20EDF72586550600CBF05E /* MachineLearningResult.swift in Sources */,
 				3B20EDF92586550600CBF05E /* SSDCreditCardOcr.swift in Sources */,
 				3B20EE54258658F900CBF05E /* SSD.swift in Sources */,
-				3B20EE022586550600CBF05E /* DetectedAllOcrBoxes.swift in Sources */,
 				3B20EE192586550600CBF05E /* ScanViewController.swift in Sources */,
 				3B20EE0F2586550600CBF05E /* CreditCardUtils.swift in Sources */,
 				3B20EE002586550600CBF05E /* PreviewView.swift in Sources */,
