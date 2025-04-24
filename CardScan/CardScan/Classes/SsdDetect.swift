@@ -59,8 +59,8 @@ public struct SsdDetect {
         return self.ssdModel != nil
     }
     
-    func detectObjects(prediction: SSDOutput, image: UIImage) -> DetectedAllBoxes {
-        var DetectedSSDBoxes = DetectedAllBoxes()
+    func detectObjects(prediction: SSDOutput, image: UIImage) -> [DetectedSSDBox] {
+        var DetectedSSDBoxes = [DetectedSSDBox]()
         var startTime = CFAbsoluteTimeGetCurrent()
         let boxes = prediction.getBoxes()
         let scores = prediction.getScores()
@@ -78,7 +78,7 @@ public struct SsdDetect {
         os_log("%@", type: .debug, "Rest of the forward pass time: \(endTime)")
         
         for idx in 0..<result.pickedBoxes.count {
-            DetectedSSDBoxes.allBoxes.append(DetectedSSDBox(category: result.pickedLabels[idx], conf: result.pickedBoxProbs[idx], XMin: Double(result.pickedBoxes[idx][0]), YMin: Double(result.pickedBoxes[idx][1]), XMax: Double(result.pickedBoxes[idx][2]), YMax: Double(result.pickedBoxes[idx][3]), imageSize: image.size))
+            DetectedSSDBoxes.append(DetectedSSDBox(category: result.pickedLabels[idx], conf: result.pickedBoxProbs[idx], XMin: Double(result.pickedBoxes[idx][0]), YMin: Double(result.pickedBoxes[idx][1]), XMax: Double(result.pickedBoxes[idx][2]), YMax: Double(result.pickedBoxes[idx][3]), imageSize: image.size))
         }
 
 
@@ -87,7 +87,7 @@ public struct SsdDetect {
     }
     
     
-    public func predict(image: UIImage) -> DetectedAllBoxes? {
+    public func predict(image: UIImage) -> [DetectedSSDBox]? {
 
         guard let pixelBuffer = image.pixelBuffer(width: SsdDetect.ssdImageWidth, height: SsdDetect.ssdImageHeight) else {
             os_log("Couldn't convert to pixel buffer", type: .debug)

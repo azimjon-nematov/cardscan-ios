@@ -28,7 +28,6 @@
 		3B20EE032586550600CBF05E /* SsdDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDC52586550600CBF05E /* SsdDetect.swift */; };
 		3B20EE042586550600CBF05E /* CSBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDC62586550600CBF05E /* CSBundle.swift */; };
 		3B20EE052586550600CBF05E /* NMS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDC72586550600CBF05E /* NMS.swift */; };
-		3B20EE062586550600CBF05E /* DetectedAllBoxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDC82586550600CBF05E /* DetectedAllBoxes.swift */; };
 		3B20EE082586550600CBF05E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDCA2586550600CBF05E /* API.swift */; };
 		3B20EE092586550600CBF05E /* OcrPriorsGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDCB2586550600CBF05E /* OcrPriorsGen.swift */; };
 		3B20EE0A2586550600CBF05E /* PostDetectionAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDCC2586550600CBF05E /* PostDetectionAlgorithm.swift */; };
@@ -109,7 +108,6 @@
 		3B20EDC52586550600CBF05E /* SsdDetect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SsdDetect.swift; sourceTree = "<group>"; };
 		3B20EDC62586550600CBF05E /* CSBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSBundle.swift; sourceTree = "<group>"; };
 		3B20EDC72586550600CBF05E /* NMS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMS.swift; sourceTree = "<group>"; };
-		3B20EDC82586550600CBF05E /* DetectedAllBoxes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectedAllBoxes.swift; sourceTree = "<group>"; };
 		3B20EDCA2586550600CBF05E /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		3B20EDCB2586550600CBF05E /* OcrPriorsGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OcrPriorsGen.swift; sourceTree = "<group>"; };
 		3B20EDCC2586550600CBF05E /* PostDetectionAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetectionAlgorithm.swift; sourceTree = "<group>"; };
@@ -232,7 +230,6 @@
 				3B20EDB52586550600CBF05E /* CreditCardOcr */,
 				3B20EDD12586550600CBF05E /* CreditCardUtils.swift */,
 				3B20EDC62586550600CBF05E /* CSBundle.swift */,
-				3B20EDC82586550600CBF05E /* DetectedAllBoxes.swift */,
 				3B20EDD62586550600CBF05E /* DetectedBox.swift */,
 				3B20EDD32586550600CBF05E /* DetectedSSDBox.swift */,
 				3B20EDE42586550600CBF05E /* DetectedSSDOcrBox.swift */,
@@ -457,7 +454,6 @@
 				3B20EE1D2586550600CBF05E /* ScanEventsProtocol.swift in Sources */,
 				3B20EE152586550600CBF05E /* SimpleScanViewController.swift in Sources */,
 				3B20EE082586550600CBF05E /* API.swift in Sources */,
-				3B20EE062586550600CBF05E /* DetectedAllBoxes.swift in Sources */,
 				F38B48B92673FD0C002CFB22 /* Array+utils.swift in Sources */,
 				3B20EE132586550600CBF05E /* Torch.swift in Sources */,
 				3B20EE162586550600CBF05E /* CardNetwork.swift in Sources */,
