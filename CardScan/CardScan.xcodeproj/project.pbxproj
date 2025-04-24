@@ -32,7 +32,6 @@
 		3B20EE092586550600CBF05E /* OcrPriorsGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDCB2586550600CBF05E /* OcrPriorsGen.swift */; };
 		3B20EE0A2586550600CBF05E /* PostDetectionAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDCC2586550600CBF05E /* PostDetectionAlgorithm.swift */; };
 		3B20EE0B2586550600CBF05E /* SSDOcrDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDCD2586550600CBF05E /* SSDOcrDetect.swift */; };
-		3B20EE0C2586550600CBF05E /* OcrDD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDCE2586550600CBF05E /* OcrDD.swift */; };
 		3B20EE0D2586550600CBF05E /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDCF2586550600CBF05E /* AppState.swift */; };
 		3B20EE0E2586550600CBF05E /* UIImage+pixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDD02586550600CBF05E /* UIImage+pixelBuffer.swift */; };
 		3B20EE0F2586550600CBF05E /* CreditCardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDD12586550600CBF05E /* CreditCardUtils.swift */; };
@@ -112,7 +111,6 @@
 		3B20EDCB2586550600CBF05E /* OcrPriorsGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OcrPriorsGen.swift; sourceTree = "<group>"; };
 		3B20EDCC2586550600CBF05E /* PostDetectionAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetectionAlgorithm.swift; sourceTree = "<group>"; };
 		3B20EDCD2586550600CBF05E /* SSDOcrDetect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDOcrDetect.swift; sourceTree = "<group>"; };
-		3B20EDCE2586550600CBF05E /* OcrDD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OcrDD.swift; sourceTree = "<group>"; };
 		3B20EDCF2586550600CBF05E /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		3B20EDD02586550600CBF05E /* UIImage+pixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+pixelBuffer.swift"; sourceTree = "<group>"; };
 		3B20EDD12586550600CBF05E /* CreditCardUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardUtils.swift; sourceTree = "<group>"; };
@@ -238,7 +236,6 @@
 				3B20EDE82586550600CBF05E /* InterfaceOrientation.swift */,
 				3B20EDF12586550600CBF05E /* ModelConfigResponse.swift */,
 				3B20EDC72586550600CBF05E /* NMS.swift */,
-				3B20EDCE2586550600CBF05E /* OcrDD.swift */,
 				3B20EDEA2586550600CBF05E /* OcrDDUtils.swift */,
 				3B20EDCB2586550600CBF05E /* OcrPriorsGen.swift */,
 				3B20EDCC2586550600CBF05E /* PostDetectionAlgorithm.swift */,
@@ -505,7 +502,6 @@
 				3B20EDF62586550600CBF05E /* CreditCardOcrPrediction.swift in Sources */,
 				3B20EE092586550600CBF05E /* OcrPriorsGen.swift in Sources */,
 				3B20EE252586550600CBF05E /* InterfaceOrientation.swift in Sources */,
-				3B20EE0C2586550600CBF05E /* OcrDD.swift in Sources */,
 				F38B48B72673FBBB002CFB22 /* CGrect+utils.swift in Sources */,
 				3B20EDFC2586550600CBF05E /* NonNameWords.swift in Sources */,
 				3B20EE102586550600CBF05E /* ScanConfiguration.swift in Sources */,

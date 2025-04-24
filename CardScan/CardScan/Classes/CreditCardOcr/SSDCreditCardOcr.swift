@@ -8,10 +8,10 @@ import UIKit
 
 @available(iOS 11.2, *)
 public class SSDCreditCardOcr: CreditCardOcrImplementation {
-    let ocr: OcrDD
+    var ssdOcr: SSDOcrDetect
     
     public override init(dispatchQueueLabel: String) {
-        ocr = OcrDD()
+        ssdOcr = SSDOcrDetect()
         super.init(dispatchQueueLabel: dispatchQueueLabel)
     }
     
@@ -23,9 +23,9 @@ public class SSDCreditCardOcr: CreditCardOcrImplementation {
         }
                 
         let startTime = Date()
-        let number = ocr.perform(croppedCardImage: image)
+        let number = ssdOcr.predict(image: UIImage(cgImage: image))
         let duration = -startTime.timeIntervalSinceNow
-        let numberBoxes = ocr.lastDetectedBoxes
+        let numberBoxes = ssdOcr.lastDetectedBoxes
         
         self.computationTime += duration
         self.frames += 1
