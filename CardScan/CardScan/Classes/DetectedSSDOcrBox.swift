@@ -1,7 +1,7 @@
 import CoreGraphics
 import Foundation
 
-struct DetectedSSDOcrBox {
+public struct DetectedSSDOcrBox {
     let rect: CGRect
     let label: Int
     let confidence: Float

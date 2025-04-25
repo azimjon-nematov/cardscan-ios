@@ -619,8 +619,8 @@ class CardScan_QuickReadTest: XCTestCase {
     ]
     
     func testOCRBoxes_LinearNumber() {
-        var boxes = DetectedAllOcrBoxes()
-        boxes.allBoxes = linearNumbers
+        var boxes = [DetectedSSDOcrBox]()
+        boxes = linearNumbers
         
         guard let (number, _) = OcrDDUtils.sortAndRemoveFalsePositives(allBoxes: boxes) else {
             XCTFail("testOCRBoxes_LinearNumber: Failed to produce card number")
@@ -632,8 +632,8 @@ class CardScan_QuickReadTest: XCTestCase {
     }
     
     func testOCRBoxes_VisaQuickReadNumber() {
-        var boxes = DetectedAllOcrBoxes()
-        boxes.allBoxes = visaQuickReadNumbers
+        var boxes = [DetectedSSDOcrBox]()
+        boxes = visaQuickReadNumbers
         
         guard let (number, _) = OcrDDUtils.processQuickRead(allBoxes: boxes) else {
             XCTFail("testOCRBoxes_VisaQuickReadNumber: Failed to produce card number")
@@ -645,8 +645,8 @@ class CardScan_QuickReadTest: XCTestCase {
     }
     
     func testOCRBoxes_LinearNumberTopLeftBottomRight() {
-        var boxes = DetectedAllOcrBoxes()
-        boxes.allBoxes = linearNumbers_TopLeftBottomRight
+        var boxes = [DetectedSSDOcrBox]()
+        boxes = linearNumbers_TopLeftBottomRight
         
         guard let (number, _) = OcrDDUtils.sortAndRemoveFalsePositives(allBoxes: boxes) else {
             XCTFail("testOCRBoxes_LinearNumberTopLeftBottomRight: Failed to produce card number")
@@ -658,8 +658,8 @@ class CardScan_QuickReadTest: XCTestCase {
     }
     
     func testOCRBoxes_LinearNumberBottomLeftTopRight() {
-        var boxes = DetectedAllOcrBoxes()
-        boxes.allBoxes = linearNumbers_BottomLeftTopRight
+        var boxes = [DetectedSSDOcrBox]()
+        boxes = linearNumbers_BottomLeftTopRight
         
         guard let (number, _) = OcrDDUtils.sortAndRemoveFalsePositives(allBoxes: boxes) else {
             XCTFail("testOCRBoxes_LinearNumberBottomLeftTopRight: Failed to produce card number")
