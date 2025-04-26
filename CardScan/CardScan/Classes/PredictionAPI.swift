@@ -19,7 +19,7 @@ struct Result{
     }
 }
 
-struct PredictionAPI{
+struct PredictionAPI{ // TODO: this can be deleted
     
     /**
      * A utitliy struct that applies non-max supression to each class

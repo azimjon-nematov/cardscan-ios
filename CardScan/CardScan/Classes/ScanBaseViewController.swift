@@ -324,11 +324,6 @@ public protocol TestingImageDataSource: AnyObject {
         self.setupMask()
     }
     
-    override open func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.ocrMainLoop()?.scanStats.orientation = UIWindow.interfaceOrientationToString
-    }
-    
     override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.videoFeed.willDisappear()

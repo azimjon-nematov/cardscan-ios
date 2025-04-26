@@ -16,7 +16,6 @@ public struct ScanStats {
     public var embossedDigitsRecognized = 0
     public var embossedDigitsDetected = 0
     public var torchOn = false
-    public var orientation = "Portrait"
     public var success: Bool?
     public var endTime: Date?
     public var model: String?

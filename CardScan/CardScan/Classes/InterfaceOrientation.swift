@@ -18,18 +18,6 @@ extension UIWindow {
             return UIApplication.shared.statusBarOrientation
         }
     }
-    
-    static var interfaceOrientationToString: String {
-        switch (self.interfaceOrientation) {
-        case .portrait: return "portrait"
-        case .portraitUpsideDown: return "portrait_upside_down"
-        case .landscapeRight: return "landscape_right"
-        case .landscapeLeft: return "landscape_left"
-        case .unknown: return "unknown"
-        @unknown default:
-            return "unknown"
-        }
-    }
 }
 
 extension AVCaptureVideoOrientation {
