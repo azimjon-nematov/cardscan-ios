@@ -95,7 +95,7 @@ extension SSDOutput{
         return normalizedScores
     }
     
-    func convertLocationsToBoxes(locations: [[Float]], priors: [CGRect], centerVariance: Float, sizeVariance : Float) -> [[Float]]{
+    func convertLocationsToBoxes(locations: [[Float]], priors: [CGRect], centerVariance: Float, sizeVariance : Float) -> [[Float]]{ //TODO: key: 123469
         
         /** Convert regressional location results of
          SSD into boxes in the form of (center_x, center_y, h, w)

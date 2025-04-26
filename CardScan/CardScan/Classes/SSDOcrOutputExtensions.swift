@@ -131,7 +131,7 @@ extension SSDOcrOutput {
         priors: [CGRect],
         centerVariance: Float,
         sizeVariance : Float
-    ) -> [[Float]] {
+    ) -> [[Float]] { //TODO: key: 123469
         
         /** Convert regressional location results of
          SSD into boxes in the form of (center_x, center_y, h, w)
