@@ -19,7 +19,6 @@
 		3B20EDF92586550600CBF05E /* SSDCreditCardOcr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDBB2586550600CBF05E /* SSDCreditCardOcr.swift */; };
 		3B20EDFA2586550600CBF05E /* CreditCardOcrResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDBC2586550600CBF05E /* CreditCardOcrResult.swift */; };
 		3B20EDFB2586550600CBF05E /* MainLoopStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDBD2586550600CBF05E /* MainLoopStateMachine.swift */; };
-		3B20EDFC2586550600CBF05E /* NonNameWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDBE2586550600CBF05E /* NonNameWords.swift */; };
 		3B20EDFD2586550600CBF05E /* OcrMainLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDBF2586550600CBF05E /* OcrMainLoop.swift */; };
 		3B20EDFE2586550600CBF05E /* ErrorCorrection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDC02586550600CBF05E /* ErrorCorrection.swift */; };
 		3B20EDFF2586550600CBF05E /* PriorsGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDC12586550600CBF05E /* PriorsGen.swift */; };
@@ -97,7 +96,6 @@
 		3B20EDBB2586550600CBF05E /* SSDCreditCardOcr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDCreditCardOcr.swift; sourceTree = "<group>"; };
 		3B20EDBC2586550600CBF05E /* CreditCardOcrResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardOcrResult.swift; sourceTree = "<group>"; };
 		3B20EDBD2586550600CBF05E /* MainLoopStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainLoopStateMachine.swift; sourceTree = "<group>"; };
-		3B20EDBE2586550600CBF05E /* NonNameWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NonNameWords.swift; sourceTree = "<group>"; };
 		3B20EDBF2586550600CBF05E /* OcrMainLoop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OcrMainLoop.swift; sourceTree = "<group>"; };
 		3B20EDC02586550600CBF05E /* ErrorCorrection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorCorrection.swift; sourceTree = "<group>"; };
 		3B20EDC12586550600CBF05E /* PriorsGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorsGen.swift; sourceTree = "<group>"; };
@@ -272,7 +270,6 @@
 				3B20EDBB2586550600CBF05E /* SSDCreditCardOcr.swift */,
 				3B20EDBC2586550600CBF05E /* CreditCardOcrResult.swift */,
 				3B20EDBD2586550600CBF05E /* MainLoopStateMachine.swift */,
-				3B20EDBE2586550600CBF05E /* NonNameWords.swift */,
 				3B20EDBF2586550600CBF05E /* OcrMainLoop.swift */,
 				3B20EDC02586550600CBF05E /* ErrorCorrection.swift */,
 			);
@@ -499,7 +496,6 @@
 				3B20EE092586550600CBF05E /* OcrPriorsGen.swift in Sources */,
 				3B20EE252586550600CBF05E /* InterfaceOrientation.swift in Sources */,
 				F38B48B72673FBBB002CFB22 /* CGrect+utils.swift in Sources */,
-				3B20EDFC2586550600CBF05E /* NonNameWords.swift in Sources */,
 				3B20EE102586550600CBF05E /* ScanConfiguration.swift in Sources */,
 				3B15C14F259C326A005A394A /* String+localization.swift in Sources */,
 			);
