@@ -56,7 +56,7 @@ import UIKit
  this code and customize it to fit your needs -- we're fine with whatever makes
  the most sense for your app.
  */
-// TODO: Delete
+
 @available(iOS 11.2, *)
 @objc public protocol SimpleScanDelegate {
     @objc func userDidCancelSimple(_ scanViewController: SimpleScanViewController)

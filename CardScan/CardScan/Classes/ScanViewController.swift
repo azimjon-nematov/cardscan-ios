@@ -92,7 +92,7 @@ import UIKit
 }
 
 @available(iOS 11.2, *)
-@objc public class ScanViewController: ScanBaseViewController {
+@objc public class ScanViewController: ScanBaseViewController { // TODO: Delete
     
     public weak var scanDelegate: ScanDelegate?
     public weak var captureOutputDelegate: CaptureOutputDelegate?

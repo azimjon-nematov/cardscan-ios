@@ -1,5 +1,5 @@
 import Foundation
-
+// TODO: this may be deleted
 public struct Expiry: Hashable {
     public let string: String
     public let month: UInt

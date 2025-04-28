@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PredictionUtilOcr{
+struct PredictionUtilOcr{ // TODO: struct may be deleted too
     
     /**
      * A utitliy struct that applies non-max supression to each class
