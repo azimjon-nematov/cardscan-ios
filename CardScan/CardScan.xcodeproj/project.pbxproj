@@ -58,7 +58,6 @@
 		3B20EE272586550600CBF05E /* OcrDDUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDEA2586550600CBF05E /* OcrDDUtils.swift */; };
 		3B20EE282586550600CBF05E /* AppleOcr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDEC2586550600CBF05E /* AppleOcr.swift */; };
 		3B20EE292586550600CBF05E /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDED2586550600CBF05E /* BlurView.swift */; };
-		3B20EE2A2586550600CBF05E /* PredictionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDEE2586550600CBF05E /* PredictionAPI.swift */; };
 		3B20EE2B2586550600CBF05E /* SSDOcr.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDEF2586550600CBF05E /* SSDOcr.mlmodel */; };
 		3B20EE2D2586550600CBF05E /* ModelConfigResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDF12586550600CBF05E /* ModelConfigResponse.swift */; };
 		3B20EE48258655DC00CBF05E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B20EE42258655DC00CBF05E /* Assets.xcassets */; };
@@ -135,7 +134,6 @@
 		3B20EDEA2586550600CBF05E /* OcrDDUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OcrDDUtils.swift; sourceTree = "<group>"; };
 		3B20EDEC2586550600CBF05E /* AppleOcr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleOcr.swift; sourceTree = "<group>"; };
 		3B20EDED2586550600CBF05E /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
-		3B20EDEE2586550600CBF05E /* PredictionAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionAPI.swift; sourceTree = "<group>"; };
 		3B20EDEF2586550600CBF05E /* SSDOcr.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SSDOcr.mlmodel; sourceTree = "<group>"; };
 		3B20EDF12586550600CBF05E /* ModelConfigResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelConfigResponse.swift; sourceTree = "<group>"; };
 		3B20EE42258655DC00CBF05E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -234,7 +232,6 @@
 				3B20EDEA2586550600CBF05E /* OcrDDUtils.swift */,
 				3B20EDCB2586550600CBF05E /* OcrPriorsGen.swift */,
 				3B20EDCC2586550600CBF05E /* PostDetectionAlgorithm.swift */,
-				3B20EDEE2586550600CBF05E /* PredictionAPI.swift */,
 				3B20EDDE2586550600CBF05E /* PredictionResult.swift */,
 				3B20EDDD2586550600CBF05E /* PredictionUtilOcr.swift */,
 				3B20EDC22586550600CBF05E /* PreviewView.swift */,
@@ -474,7 +471,6 @@
 				3B20EDF42586550600CBF05E /* OcrObject.swift in Sources */,
 				3B20EDFB2586550600CBF05E /* MainLoopStateMachine.swift in Sources */,
 				3B20EE012586550600CBF05E /* Expiry.swift in Sources */,
-				3B20EE2A2586550600CBF05E /* PredictionAPI.swift in Sources */,
 				3B20EDFD2586550600CBF05E /* OcrMainLoop.swift in Sources */,
 				3B20EE042586550600CBF05E /* CSBundle.swift in Sources */,
 				3B20EDFE2586550600CBF05E /* ErrorCorrection.swift in Sources */,

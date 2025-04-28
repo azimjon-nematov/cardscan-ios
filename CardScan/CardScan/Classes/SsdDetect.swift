@@ -72,8 +72,7 @@ public struct SsdDetect {
         let regularBoxes = prediction.convertLocationsToBoxes(locations: boxes, priors: SsdDetect.priors ?? PriorsGen.combinePriors(), centerVariance: 0.1, sizeVariance: 0.2)
         let cornerFormBoxes = prediction.centerFormToCornerForm(regularBoxes: regularBoxes)
 
-        let predAPI = PredictionAPI()
-        let result:Result = predAPI.predictionAPI(scores:normalizedScores, boxes: cornerFormBoxes, probThreshold: SsdDetect.probThreshold, iouThreshold: SsdDetect.iouThreshold, candidateSize: SsdDetect.candidateSize, topK: SsdDetect.topK)
+        let result:Result = predictionAPI(scores:normalizedScores, boxes: cornerFormBoxes, probThreshold: SsdDetect.probThreshold, iouThreshold: SsdDetect.iouThreshold, candidateSize: SsdDetect.candidateSize, topK: SsdDetect.topK)
         endTime = CFAbsoluteTimeGetCurrent() - startTime
         os_log("%@", type: .debug, "Rest of the forward pass time: \(endTime)")
         
@@ -83,6 +82,51 @@ public struct SsdDetect {
 
 
        return DetectedSSDBoxes
+        
+    }
+    
+    /**
+     * A utitliy struct that applies non-max supression to each class
+     * picks out the remaining boxes, the class probabilities for classes
+     * that are kept and composes all the information in one place to be returned as
+     * an object.
+     */
+    func predictionAPI(scores: [[Float]], boxes: [[Float]], probThreshold: Float, iouThreshold: Float, candidateSize: Int , topK: Int) -> Result{
+        var pickedBoxes:[[Float]] = [[Float]]()
+        var pickedLabels:[Int] = [Int]()
+        var pickedBoxProbs:[Float] = [Float]()
+        
+        
+        for classIndex in 1..<scores[0].count{
+            var probs: [Float] = [Float]()
+            var subsetBoxes: [[Float]] = [[Float]]()
+            var indicies : [Int] = [Int]()
+            
+            for rowIndex in 0..<scores.count{
+                if scores[rowIndex][classIndex] > probThreshold{
+                    probs.append(scores[rowIndex][classIndex])
+                    subsetBoxes.append(boxes[rowIndex])
+                }
+            }
+            
+            if probs.count == 0{
+                continue
+            }
+            
+            indicies = NMS.hardNMS(subsetBoxes: subsetBoxes, probs: probs, iouThreshold: iouThreshold, topK: topK, candidateSize: candidateSize)
+           
+            for idx in indicies{
+                pickedBoxProbs.append(probs[idx])
+                pickedBoxes.append(subsetBoxes[idx])
+                pickedLabels.append(classIndex)
+            }
+        }
+        var result: Result = Result()
+        result.pickedBoxProbs =  pickedBoxProbs
+        result.pickedLabels = pickedLabels
+        result.pickedBoxes = pickedBoxes
+        
+        return result
         
     }
     
@@ -113,4 +157,17 @@ public struct SsdDetect {
     }
     
 
+}
+
+
+struct Result{
+    var pickedBoxProbs: [Float]
+    var pickedLabels: [Int]
+    var pickedBoxes: [[Float]]
+    
+    init() {
+        pickedBoxProbs = [Float]()
+        pickedLabels = [Int]()
+        pickedBoxes = [[Float]]()
+    }
 }
