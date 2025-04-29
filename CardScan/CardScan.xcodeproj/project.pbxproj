@@ -48,7 +48,6 @@
 		3B20EE1F2586550600CBF05E /* SSDOutputExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDE12586550600CBF05E /* SSDOutputExtensions.swift */; };
 		3B20EE212586550600CBF05E /* ScanBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDE32586550600CBF05E /* ScanBaseViewController.swift */; };
 		3B20EE222586550600CBF05E /* DetectedSSDOcrBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDE42586550600CBF05E /* DetectedSSDOcrBox.swift */; };
-		3B20EE232586550600CBF05E /* CreditCardOcrPrediction+expiry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDE62586550600CBF05E /* CreditCardOcrPrediction+expiry.swift */; };
 		3B20EE242586550600CBF05E /* Image+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDE72586550600CBF05E /* Image+utils.swift */; };
 		3B20EE252586550600CBF05E /* InterfaceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDE82586550600CBF05E /* InterfaceOrientation.swift */; };
 		3B20EE262586550600CBF05E /* ScanStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDE92586550600CBF05E /* ScanStats.swift */; };
@@ -61,7 +60,6 @@
 		3B20EE4A258655DC00CBF05E /* CardScan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B20EE45258655DC00CBF05E /* CardScan.storyboard */; };
 		3B20EE54258658F900CBF05E /* SSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EE53258658F900CBF05E /* SSD.swift */; };
 		3B9F1588259C1F4C00881C1B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B9F158A259C1F4C00881C1B /* Localizable.strings */; };
-		F38B48B72673FBBB002CFB22 /* CGrect+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B48B62673FBBB002CFB22 /* CGrect+utils.swift */; };
 		F38B48B92673FD0C002CFB22 /* Array+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B48B82673FD0C002CFB22 /* Array+utils.swift */; };
 		F3FB36702640BEC10010382C /* CardScan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B20ED9C2586539600CBF05E /* CardScan.framework */; };
 /* End PBXBuildFile section */
@@ -120,7 +118,6 @@
 		3B20EDE12586550600CBF05E /* SSDOutputExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDOutputExtensions.swift; sourceTree = "<group>"; };
 		3B20EDE32586550600CBF05E /* ScanBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanBaseViewController.swift; sourceTree = "<group>"; };
 		3B20EDE42586550600CBF05E /* DetectedSSDOcrBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectedSSDOcrBox.swift; sourceTree = "<group>"; };
-		3B20EDE62586550600CBF05E /* CreditCardOcrPrediction+expiry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CreditCardOcrPrediction+expiry.swift"; sourceTree = "<group>"; };
 		3B20EDE72586550600CBF05E /* Image+utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+utils.swift"; sourceTree = "<group>"; };
 		3B20EDE82586550600CBF05E /* InterfaceOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceOrientation.swift; sourceTree = "<group>"; };
 		3B20EDE92586550600CBF05E /* ScanStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanStats.swift; sourceTree = "<group>"; };
@@ -147,7 +144,6 @@
 		3B9F1597259C200100881C1B /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B9F1598259C200700881C1B /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B9F1599259C201600881C1B /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
-		F38B48B62673FBBB002CFB22 /* CGrect+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGrect+utils.swift"; sourceTree = "<group>"; };
 		F38B48B82673FD0C002CFB22 /* Array+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+utils.swift"; sourceTree = "<group>"; };
 		F3FB366B2640BEC10010382C /* CardScanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardScanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -264,10 +260,8 @@
 				3B20EDD02586550600CBF05E /* UIImage+pixelBuffer.swift */,
 				3B20EDE82586550600CBF05E /* InterfaceOrientation.swift */,
 				3B20EDD42586550600CBF05E /* CGRectExtension.swift */,
-				3B20EDE62586550600CBF05E /* CreditCardOcrPrediction+expiry.swift */,
 				3B20EDE72586550600CBF05E /* Image+utils.swift */,
 				3B15C14E259C326A005A394A /* String+localization.swift */,
-				F38B48B62673FBBB002CFB22 /* CGrect+utils.swift */,
 				F38B48B82673FD0C002CFB22 /* Array+utils.swift */,
 			);
 			path = Extensions;
@@ -462,7 +456,6 @@
 				3B20EE242586550600CBF05E /* Image+utils.swift in Sources */,
 				3B20EE292586550600CBF05E /* BlurView.swift in Sources */,
 				3B20EDFA2586550600CBF05E /* CreditCardOcrResult.swift in Sources */,
-				3B20EE232586550600CBF05E /* CreditCardOcrPrediction+expiry.swift in Sources */,
 				3B20EE2B2586550600CBF05E /* SSDOcr.mlmodel in Sources */,
 				3B20EE182586550600CBF05E /* CornerView.swift in Sources */,
 				3B20EE282586550600CBF05E /* AppleOcr.swift in Sources */,
@@ -475,7 +468,6 @@
 				3B20EDF62586550600CBF05E /* CreditCardOcrPrediction.swift in Sources */,
 				3B20EE092586550600CBF05E /* OcrPriorsGen.swift in Sources */,
 				3B20EE252586550600CBF05E /* InterfaceOrientation.swift in Sources */,
-				F38B48B72673FBBB002CFB22 /* CGrect+utils.swift in Sources */,
 				3B20EE102586550600CBF05E /* ScanConfiguration.swift in Sources */,
 				3B15C14F259C326A005A394A /* String+localization.swift in Sources */,
 			);
