@@ -14,7 +14,6 @@
 		3B20EDF42586550600CBF05E /* OcrObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDB62586550600CBF05E /* OcrObject.swift */; };
 		3B20EDF52586550600CBF05E /* CreditCardOcrImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDB72586550600CBF05E /* CreditCardOcrImplementation.swift */; };
 		3B20EDF62586550600CBF05E /* CreditCardOcrPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDB82586550600CBF05E /* CreditCardOcrPrediction.swift */; };
-		3B20EDF72586550600CBF05E /* MachineLearningResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDB92586550600CBF05E /* MachineLearningResult.swift */; };
 		3B20EDF82586550600CBF05E /* AppleCreditCardOcr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDBA2586550600CBF05E /* AppleCreditCardOcr.swift */; };
 		3B20EDF92586550600CBF05E /* SSDCreditCardOcr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDBB2586550600CBF05E /* SSDCreditCardOcr.swift */; };
 		3B20EDFA2586550600CBF05E /* CreditCardOcrResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDBC2586550600CBF05E /* CreditCardOcrResult.swift */; };
@@ -88,7 +87,6 @@
 		3B20EDB62586550600CBF05E /* OcrObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OcrObject.swift; sourceTree = "<group>"; };
 		3B20EDB72586550600CBF05E /* CreditCardOcrImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardOcrImplementation.swift; sourceTree = "<group>"; };
 		3B20EDB82586550600CBF05E /* CreditCardOcrPrediction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardOcrPrediction.swift; sourceTree = "<group>"; };
-		3B20EDB92586550600CBF05E /* MachineLearningResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MachineLearningResult.swift; sourceTree = "<group>"; };
 		3B20EDBA2586550600CBF05E /* AppleCreditCardOcr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleCreditCardOcr.swift; sourceTree = "<group>"; };
 		3B20EDBB2586550600CBF05E /* SSDCreditCardOcr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDCreditCardOcr.swift; sourceTree = "<group>"; };
 		3B20EDBC2586550600CBF05E /* CreditCardOcrResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardOcrResult.swift; sourceTree = "<group>"; };
@@ -253,7 +251,6 @@
 				3B20EDB62586550600CBF05E /* OcrObject.swift */,
 				3B20EDB72586550600CBF05E /* CreditCardOcrImplementation.swift */,
 				3B20EDB82586550600CBF05E /* CreditCardOcrPrediction.swift */,
-				3B20EDB92586550600CBF05E /* MachineLearningResult.swift */,
 				3B20EDBA2586550600CBF05E /* AppleCreditCardOcr.swift */,
 				3B20EDBB2586550600CBF05E /* SSDCreditCardOcr.swift */,
 				3B20EDBC2586550600CBF05E /* CreditCardOcrResult.swift */,
@@ -452,7 +449,6 @@
 				3B20EE142586550600CBF05E /* DetectedBox.swift in Sources */,
 				3B20EDF52586550600CBF05E /* CreditCardOcrImplementation.swift in Sources */,
 				3B20EE032586550600CBF05E /* SsdDetect.swift in Sources */,
-				3B20EDF72586550600CBF05E /* MachineLearningResult.swift in Sources */,
 				3B20EDF92586550600CBF05E /* SSDCreditCardOcr.swift in Sources */,
 				3B20EE54258658F900CBF05E /* SSD.swift in Sources */,
 				3B20EE192586550600CBF05E /* ScanViewController.swift in Sources */,

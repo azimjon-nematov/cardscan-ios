@@ -8,12 +8,17 @@
 
 import Foundation
 
-public class CreditCardOcrResult: MachineLearningResult {
+public class CreditCardOcrResult {
     public let mostRecentPrediction: CreditCardOcrPrediction
     public let number: String
     public let expiry: String?
     public let name: String?
     public let state: MainLoopState
+    let duration: Double
+    let frames: Int
+    var framePerSecond: Double {
+        return Double(frames) / duration
+    }
     
     // this is only used by Card Verify and the Liveness check and filled in by the UxModel
     public var hasCenteredCard: CenteredCardState?
@@ -24,7 +29,8 @@ public class CreditCardOcrResult: MachineLearningResult {
         self.expiry = expiry
         self.name = name
         self.state = state
-        super.init(duration: duration, frames: frames)
+        self.duration = duration
+        self.frames = frames
     }
     
     public var expiryMonth: String? {
