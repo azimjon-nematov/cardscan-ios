@@ -84,24 +84,6 @@ public struct Api {
 //        }.resume()
 //    }
     
-    static func deviceType() -> String {
-        var systemInfo = utsname()
-        uname(&systemInfo)
-        var deviceType = ""
-        for char in Mirror(reflecting: systemInfo.machine).children {
-            guard let charDigit = (char.value as? Int8) else {
-                return ""
-            }
-            
-            if charDigit == 0 {
-                break
-            }
-            
-            deviceType += String(UnicodeScalar(UInt8(charDigit)))
-        }
-        
-        return deviceType
-    }
     
 //    static func getSdkVersion() -> String? {
 //        guard let bundle = CSBundle.bundle() else {
