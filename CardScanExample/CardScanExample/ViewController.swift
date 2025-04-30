@@ -102,9 +102,9 @@ class ViewController: UIViewController {
         vc.allowSkip = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 20.0) {
             vc.cancel(callDelegate: true)
-            let scanStats = vc.getScanStats()
-            let fps = Double(scanStats.scans) / scanStats.duration()
-            print("fps -> \(fps)")
+//            let scanStats = vc.getScanStats()
+//            let fps = Double(scanStats.scans) / scanStats.duration()
+//            print("fps -> \(fps)")
         }
         self.present(vc, animated: true)
     }
@@ -137,12 +137,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func scanWithStatsPress() {
-//        ScanViewController.configure(apiKey: "0xdeadbeef")
         guard let vc = ScanViewController.createViewController(withDelegate: self) else {
             print("scan view controller not supported on this hardware")
             return
         }
-        vc.scanEventsDelegate = self
         
         self.present(vc, animated: true)
     }
@@ -161,7 +159,7 @@ extension ViewController: ScanDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "results") as! ResultViewController
-        vc.scanStats = scanViewController.getScanStats()
+//        vc.scanStats = scanViewController.getScanStats()
         vc.number = creditCard.number
         vc.cardImage = creditCard.image
         vc.expiration = creditCard.expiryForDisplay()
@@ -188,7 +186,7 @@ extension ViewController: SimpleScanDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "results") as! ResultViewController
-        vc.scanStats = scanViewController.getScanStats()
+//        vc.scanStats = scanViewController.getScanStats()
         vc.number = creditCard.number
         vc.cardImage = creditCard.image
         vc.expiration = creditCard.expiryForDisplay()
@@ -197,15 +195,6 @@ extension ViewController: SimpleScanDelegate {
         self.dismiss(animated: true)
         self.present(vc, animated: true)
     }
-}
-
-extension ViewController: ScanEvents {
-    func onNumberRecognized(number: String, expiry: Expiry?, numberBoundingBox: CGRect,
-                            expiryBoundingBox: CGRect?, croppedCardSize: CGSize, squareCardImage:
-                                CGImage, fullCardImage: CGImage, centeredCardState: CenteredCardState?, uxFrameConfidenceValues: UxFrameConfidenceValues?, flashForcedOn: Bool, numberBoxesInFullImageFrame: [CGRect]) {}
-    func onScanComplete(scanStats: ScanStats) {}
-    func onFrameDetected(croppedCardSize: CGSize, squareCardImage: CGImage, fullCardImage: CGImage,
-                         centeredCardState: CenteredCardState?, uxFrameConfidenceValues: UxFrameConfidenceValues?, flashForcedOn: Bool) {}
 }
 
 extension ViewController: FullScanStringsDataSource {

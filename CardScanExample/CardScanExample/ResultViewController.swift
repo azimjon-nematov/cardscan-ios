@@ -19,7 +19,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var last0: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
-    var scanStats: ScanStats?
+//    var scanStats: ScanStats?
     var number: String?
     var expiration: String?
     var name: String?

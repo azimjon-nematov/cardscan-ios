@@ -109,7 +109,8 @@ import UIKit
     @objc public static var torchButtonString = "Torch".localize()
     
     @objc public weak var delegate: SimpleScanDelegate?
-    @objc public var scanPerformancePriority: ScanPerformance = .fast
+//    @objc public var scanPerformancePriority: ScanPerformance = .fast
+    @objc public var scanPerformancePriority: ScanPerformance = .accurate
     @objc public var maxErrorCorrectionDuration: Double = 4.0
     
     @objc public static func createViewController() -> SimpleScanViewController {

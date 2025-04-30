@@ -27,7 +27,6 @@
 		3B20EE042586550600CBF05E /* CSBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDC62586550600CBF05E /* CSBundle.swift */; };
 		3B20EE052586550600CBF05E /* NMS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDC72586550600CBF05E /* NMS.swift */; };
 		3B20EE092586550600CBF05E /* OcrPriorsGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDCB2586550600CBF05E /* OcrPriorsGen.swift */; };
-		3B20EE0A2586550600CBF05E /* PostDetectionAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDCC2586550600CBF05E /* PostDetectionAlgorithm.swift */; };
 		3B20EE0B2586550600CBF05E /* SSDOcrDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDCD2586550600CBF05E /* SSDOcrDetect.swift */; };
 		3B20EE0E2586550600CBF05E /* UIImage+pixelBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDD02586550600CBF05E /* UIImage+pixelBuffer.swift */; };
 		3B20EE0F2586550600CBF05E /* CreditCardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDD12586550600CBF05E /* CreditCardUtils.swift */; };
@@ -43,7 +42,6 @@
 		3B20EE1A2586550600CBF05E /* SoftNMS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDDC2586550600CBF05E /* SoftNMS.swift */; };
 		3B20EE1B2586550600CBF05E /* PredictionUtilOcr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDDD2586550600CBF05E /* PredictionUtilOcr.swift */; };
 		3B20EE1C2586550600CBF05E /* PredictionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDDE2586550600CBF05E /* PredictionResult.swift */; };
-		3B20EE1D2586550600CBF05E /* ScanEventsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDDF2586550600CBF05E /* ScanEventsProtocol.swift */; };
 		3B20EE1E2586550600CBF05E /* SSDOcrOutputExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDE02586550600CBF05E /* SSDOcrOutputExtensions.swift */; };
 		3B20EE1F2586550600CBF05E /* SSDOutputExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDE12586550600CBF05E /* SSDOutputExtensions.swift */; };
 		3B20EE212586550600CBF05E /* ScanBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDE32586550600CBF05E /* ScanBaseViewController.swift */; };
@@ -97,7 +95,6 @@
 		3B20EDC62586550600CBF05E /* CSBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSBundle.swift; sourceTree = "<group>"; };
 		3B20EDC72586550600CBF05E /* NMS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMS.swift; sourceTree = "<group>"; };
 		3B20EDCB2586550600CBF05E /* OcrPriorsGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OcrPriorsGen.swift; sourceTree = "<group>"; };
-		3B20EDCC2586550600CBF05E /* PostDetectionAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetectionAlgorithm.swift; sourceTree = "<group>"; };
 		3B20EDCD2586550600CBF05E /* SSDOcrDetect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDOcrDetect.swift; sourceTree = "<group>"; };
 		3B20EDD02586550600CBF05E /* UIImage+pixelBuffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+pixelBuffer.swift"; sourceTree = "<group>"; };
 		3B20EDD12586550600CBF05E /* CreditCardUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardUtils.swift; sourceTree = "<group>"; };
@@ -113,7 +110,6 @@
 		3B20EDDC2586550600CBF05E /* SoftNMS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftNMS.swift; sourceTree = "<group>"; };
 		3B20EDDD2586550600CBF05E /* PredictionUtilOcr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionUtilOcr.swift; sourceTree = "<group>"; };
 		3B20EDDE2586550600CBF05E /* PredictionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionResult.swift; sourceTree = "<group>"; };
-		3B20EDDF2586550600CBF05E /* ScanEventsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanEventsProtocol.swift; sourceTree = "<group>"; };
 		3B20EDE02586550600CBF05E /* SSDOcrOutputExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDOcrOutputExtensions.swift; sourceTree = "<group>"; };
 		3B20EDE12586550600CBF05E /* SSDOutputExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDOutputExtensions.swift; sourceTree = "<group>"; };
 		3B20EDE32586550600CBF05E /* ScanBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanBaseViewController.swift; sourceTree = "<group>"; };
@@ -214,14 +210,12 @@
 				3B20EDC72586550600CBF05E /* NMS.swift */,
 				3B20EDEA2586550600CBF05E /* OcrDDUtils.swift */,
 				3B20EDCB2586550600CBF05E /* OcrPriorsGen.swift */,
-				3B20EDCC2586550600CBF05E /* PostDetectionAlgorithm.swift */,
 				3B20EDDE2586550600CBF05E /* PredictionResult.swift */,
 				3B20EDDD2586550600CBF05E /* PredictionUtilOcr.swift */,
 				3B20EDC22586550600CBF05E /* PreviewView.swift */,
 				3B20EDC12586550600CBF05E /* PriorsGen.swift */,
 				3B20EDE32586550600CBF05E /* ScanBaseViewController.swift */,
 				3B20EDD22586550600CBF05E /* ScanConfiguration.swift */,
-				3B20EDDF2586550600CBF05E /* ScanEventsProtocol.swift */,
 				3B20EDE92586550600CBF05E /* ScanStats.swift */,
 				3B20EDDB2586550600CBF05E /* ScanViewController.swift */,
 				3B20EDD72586550600CBF05E /* SimpleScanViewController.swift */,
@@ -421,7 +415,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B20EE1D2586550600CBF05E /* ScanEventsProtocol.swift in Sources */,
 				3B20EE152586550600CBF05E /* SimpleScanViewController.swift in Sources */,
 				F38B48B92673FD0C002CFB22 /* Array+utils.swift in Sources */,
 				3B20EE132586550600CBF05E /* Torch.swift in Sources */,
@@ -444,7 +437,6 @@
 				3B20EE192586550600CBF05E /* ScanViewController.swift in Sources */,
 				3B20EE0F2586550600CBF05E /* CreditCardUtils.swift in Sources */,
 				3B20EE002586550600CBF05E /* PreviewView.swift in Sources */,
-				3B20EE0A2586550600CBF05E /* PostDetectionAlgorithm.swift in Sources */,
 				3B20EE212586550600CBF05E /* ScanBaseViewController.swift in Sources */,
 				3B20EE172586550600CBF05E /* CardType.swift in Sources */,
 				3B20EDF42586550600CBF05E /* OcrObject.swift in Sources */,

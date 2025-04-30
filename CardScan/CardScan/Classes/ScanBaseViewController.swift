@@ -13,9 +13,6 @@ public protocol TestingImageDataSource: AnyObject {
     public weak var testingImageDataSource: TestingImageDataSource?
     @objc public var includeCardImage = false
     @objc public var showDebugImageView = false
-    @objc public var sendScanStats = true
-    
-    public var scanEventsDelegate: ScanEvents?
     
     static var isAppearing = false
     static var isPadAndFormsheet: Bool = false
@@ -159,17 +156,6 @@ public protocol TestingImageDataSource: AnyObject {
             return
         }
         ocrMainLoop.userCancelled()
-        
-        if (self.sendScanStats) {
-//            let scanStatsPayload = ocrMainLoop.scanStats.createPayload()
-//            ScanApi.uploadScanStats(payload: scanStatsPayload, completion: { response, error in
-//                guard let status = response?.status, status == "ok" else {
-//                    return
-//                }
-//                
-//                ScanStats.lastScanStatsSuccess = Date()
-//            })
-        }
     }
      
     func setupMask() {
@@ -335,9 +321,9 @@ public protocol TestingImageDataSource: AnyObject {
         ScanBaseViewController.isAppearing = false
     }
     
-    public func getScanStats() -> ScanStats {
-        return self.ocrMainLoop()?.scanStats ?? ScanStats()
-    }
+//    public func getScanStats() -> ScanStats {
+//        return self.ocrMainLoop()?.scanStats ?? ScanStats()
+//    }
     
     open func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         if self.machineLearningSemaphore.wait(timeout: .now()) == .success {
@@ -393,24 +379,9 @@ public protocol TestingImageDataSource: AnyObject {
     // MARK: -OcrMainLoopComplete logic
     public func complete(creditCardOcrResult: CreditCardOcrResult) {
         ocrMainLoop()?.mainLoopDelegate = nil
-        ScanBaseViewController.machineLearningQueue.async {
-            self.scanEventsDelegate?.onScanComplete(scanStats: self.getScanStats())
-        }
         
         // hack to work around having to change our public interface
         predictedName = creditCardOcrResult.name
-
-        if (self.sendScanStats) {
-            // fire and forget
-//            let scanStatsPayload = self.ocrMainLoop()?.scanStats.createPayload() ?? ScanStats().createPayload()
-//            ScanApi.uploadScanStats(payload: scanStatsPayload, completion: { response, error in
-//                guard let status = response?.status, status == "ok" else {
-//                    return
-//                }
-//                
-//                ScanStats.lastScanStatsSuccess = Date()
-//            })
-        }
         self.onScannedCard(number: creditCardOcrResult.number, expiryYear: creditCardOcrResult.expiryYear, expiryMonth: creditCardOcrResult.expiryMonth, scannedImage: scannedCardImage)
     }
     
@@ -428,26 +399,6 @@ public protocol TestingImageDataSource: AnyObject {
         }
         if prediction.number != nil && self.includeCardImage {
             self.scannedCardImage = UIImage(cgImage: prediction.image)
-        }
-        
-        let isFlashForcedOn: Bool
-        switch (state) {
-        case .ocrForceFlash: isFlashForcedOn = true
-        default: isFlashForcedOn = false
-        }
-        
-        let cardSize = CGSize(width: prediction.image.width, height: prediction.image.height)
-        if let number = prediction.number, let numberBox = prediction.numberBox, let numberBoxes = prediction.numberBoxesInFullImageFrame {
-            let expiry = prediction.expiryObject()
-            let expiryBox = prediction.expiryBox
-            
-            ScanBaseViewController.machineLearningQueue.async {
-                self.scanEventsDelegate?.onNumberRecognized(number: number, expiry: expiry, numberBoundingBox: numberBox, expiryBoundingBox: expiryBox, croppedCardSize: cardSize, squareCardImage: squareCardImage, fullCardImage: fullCardImage, centeredCardState: prediction.centeredCardState, uxFrameConfidenceValues: prediction.uxFrameConfidenceValues, flashForcedOn: isFlashForcedOn, numberBoxesInFullImageFrame: numberBoxes)
-            }
-        } else {
-            ScanBaseViewController.machineLearningQueue.async {
-                self.scanEventsDelegate?.onFrameDetected(croppedCardSize: cardSize, squareCardImage: squareCardImage, fullCardImage: fullCardImage, centeredCardState: prediction.centeredCardState, uxFrameConfidenceValues: prediction.uxFrameConfidenceValues, flashForcedOn: isFlashForcedOn)
-            }
         }
     }
     
