@@ -367,7 +367,7 @@ import UIKit
             return
         }
                    
-       numberText.text = CreditCardUtils.format(number: number)
+       numberText.text = CreditCardUtils.formatCardNumber(cardNumber: number)
        if numberText.isHidden {
            numberText.fadeIn()
        }

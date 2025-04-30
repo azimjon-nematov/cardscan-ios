@@ -265,58 +265,6 @@ public struct CreditCardUtils {
     }
     
     /**
-        Returns the card's type (debit, credit, preiad, unknown) based on the card number
-        -   Parameter cardNumber: The card number as a string
-        -   Returns: The card's type as a CardType enum
-     */
-    public static func determineCardType(cardNumber: String) -> CardType {
-        // MARK: card_types.txt and the function may be useless
-        guard let iin = Int(cardNumber.prefix(6)) else {
-            return .UNKNOWN
-        }
-        
-        let cardTypes: [(ClosedRange<Int>, CardType)]
-        if let cardTypeMap = self.cardTypeMap {
-            cardTypes = cardTypeMap
-        } else {
-            guard let filePath = CSBundle.bundle()?.path(forResource: "card_types", ofType: "txt") else {
-                // unable to find the file
-                return .UNKNOWN
-            }
-            
-            guard let contents = try? String(contentsOfFile: filePath) else {
-                // unable to read the contents of the file
-                return .UNKNOWN
-            }
-            
-            cardTypes = contents.components(separatedBy: "\n").compactMap {
-                let items = $0.components(separatedBy: ",")
-                guard items.count == 3 else {
-                    return nil
-                }
-                
-                let cardType = CardType.fromString(items[2])
-                guard let startIin = Int(items[0]), let endIin = Int(items[1]) else {
-                    return nil
-                }
-                guard cardType != .UNKNOWN else {
-                    return nil
-                }
-                
-                return (startIin...endIin, cardType)
-            }
-            
-            guard !cardTypes.isEmpty else {
-                return .UNKNOWN
-            }
-            
-            self.cardTypeMap = cardTypes
-        }
-        
-        return cardTypes.first { $0.0.contains(iin) }?.1 ?? .UNKNOWN
-    }
-    
-    /**
         Determines whether a card number belongs to any bank network according to their bin
         -   Parameters:
             -   cardNumber: The card number as a string
@@ -325,11 +273,6 @@ public struct CreditCardUtils {
     */
     static func hasAnyPrefix(cardNumber: String, prefixes: [String] ) -> Bool {
         return prefixes.filter { cardNumber.hasPrefix($0) }.count > 0
-    }
-    
-    //TODO: Will be replaced with `formatCardNumber` in future version
-    public static func format(number: String) -> String {
-        return formatCardNumber(cardNumber: number)
     }
     
     /**
