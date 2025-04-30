@@ -270,6 +270,7 @@ public struct CreditCardUtils {
         -   Returns: The card's type as a CardType enum
      */
     public static func determineCardType(cardNumber: String) -> CardType {
+        // MARK: card_types.txt and the function may be useless
         guard let iin = Int(cardNumber.prefix(6)) else {
             return .UNKNOWN
         }
