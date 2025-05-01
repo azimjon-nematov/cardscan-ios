@@ -38,13 +38,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func scanQrCodePress() {
-        if #available(iOS 11.2, *) {
-            let vc = SimpleScanViewController.createViewController()
-            vc.delegate = self
-            self.present(vc, animated: true)
-        } else {
-            print("Only supported on iOS 11.2 and above")
-        }
+        let vc = SimpleScanViewController.createViewController()
+        vc.delegate = self
+        self.present(vc, animated: true)
     }
     
     @IBAction func scanCardPress() {
@@ -110,15 +106,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func scanAndShowImagePress() {
-        if #available(iOS 11.2, *) {
-            let vc = SimpleScanViewController.createViewController()
-            vc.includeCardImage = true
-            vc.delegate = self
+        let vc = SimpleScanViewController.createViewController()
+        vc.includeCardImage = true
+        vc.delegate = self
 
-            self.present(vc, animated: true)
-        } else {
-            // Fallback on earlier versions
-        }
+        self.present(vc, animated: true)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

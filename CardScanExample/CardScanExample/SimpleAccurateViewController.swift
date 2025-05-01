@@ -23,17 +23,13 @@ class SimpleAccurateViewController: UIViewController {
     }
         
     @IBAction func openSimpleAccuratePress(_ sender: Any) {
-        if #available(iOS 11.2, *) {
-            let vc = SimpleScanViewController.createViewController()
-            vc.scanPerformancePriority = .accurate
-            vc.maxErrorCorrectionDuration = scanErrorCorrectionDuration
-            vc.includeCardImage = true
-            vc.delegate = self
-            startTime = Date()
-            self.present(vc, animated: true)
-        } else {
-            // Fallback on earlier versions
-        }
+        let vc = SimpleScanViewController.createViewController()
+        vc.scanPerformancePriority = .accurate
+        vc.maxErrorCorrectionDuration = scanErrorCorrectionDuration
+        vc.includeCardImage = true
+        vc.delegate = self
+        startTime = Date()
+        self.present(vc, animated: true)
     }
 }
 
