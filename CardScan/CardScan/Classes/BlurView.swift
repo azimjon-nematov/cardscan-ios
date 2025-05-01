@@ -26,11 +26,7 @@ public class BlurView: UIView {
         path.addRect(self.layer.bounds)
         path.addPath(roundedRectpath)
         maskLayer.path = path
-        #if swift(>=4.2)
         maskLayer.fillRule = .evenOdd
-        #else
-        maskLayer.fillRule = kCAFillRuleEvenOdd
-        #endif
         self.layer.mask = maskLayer
     }
 

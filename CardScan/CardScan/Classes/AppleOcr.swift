@@ -35,13 +35,7 @@ struct AppleOcr {
                     return nil
                 }
                 
-                #if swift(>=5.0)
-                let unwrappedBox: VNRectangleObservation = box
-                #else
-                guard let unwrappedBox: VNRectangleObservation = box else { return nil }
-                #endif
-                
-                let boxRect = convertToImageRect(boundingBox: unwrappedBox, imageSize: imageSize)
+                let boxRect = convertToImageRect(boundingBox: box, imageSize: imageSize)
                 let confidence: Float = candidate.confidence
                 return OcrObject(text: candidate.string, conf: confidence, textBox: boxRect, imageSize: imageSize)
             }

@@ -8,9 +8,6 @@
 import AVKit
 import UIKit
 
-#if canImport(Stripe)
-    import Stripe
-#endif
 
 @available(iOS 11.2, *)
 @objc public protocol ScanDelegate {
@@ -76,19 +73,6 @@ import UIKit
         
         return "\(month)/\(year)"
     }
-    
-    #if canImport(Stripe)
-    @objc public func cardParams() -> STPCardParams {
-        let cardParam = STPCardParams()
-        cardParam.number = self.number
-        if let expiryMonth = self.expiryMonth, let expiryYear = self.expiryYear {
-            cardParam.expYear = UInt(expiryYear) ?? 0
-            cardParam.expMonth = UInt(expiryMonth) ?? 0
-        }
-        
-        return cardParam
-    }
-    #endif
 }
 
 @available(iOS 11.2, *)
