@@ -86,7 +86,7 @@ open class OcrMainLoop : MachineLearningLoop {
         case ssd
     }
     
-    public var scanStats = ScanStats()
+    var isSuccess: Bool = false
     
     public weak var mainLoopDelegate: OcrMainLoopDelegate?
     public var errorCorrection = ErrorCorrection(stateMachine: OcrMainLoopStateMachine())
@@ -118,7 +118,6 @@ open class OcrMainLoop : MachineLearningLoop {
     
     /// Note: you must call this function in your constructor
     public func setupMl(ocrImplementations: [CreditCardOcrImplementation]) {
-        scanStats.model = "ssd+apple"
         for ocrImplementation in ocrImplementations {
             analyzerQueue.append(ocrImplementation)
         }
@@ -141,10 +140,8 @@ open class OcrMainLoop : MachineLearningLoop {
         userDidCancel = true
         mutexQueue.sync { [weak self] in
             guard let self = self else { return }
-            self.scanStats.userCanceled = userDidCancel
-            if self.scanStats.success == nil {
-                self.scanStats.success = false
-                self.scanStats.endTime = Date()
+            if self.isSuccess == false {
+                self.isSuccess = false
                 self.mainLoopDelegate = nil
             }
         }
@@ -204,7 +201,7 @@ open class OcrMainLoop : MachineLearningLoop {
             let prediction = ocr.recognizeCard(in: image, roiRectangle: roi)
             self?.mutexQueue.async {
                 guard let self = self else { return }
-                self.scanStats.scans += 1
+                
                 let delegate = self.mainLoopDelegate
                 DispatchQueue.main.async { [weak self] in
                     guard let self = self else { return }
@@ -224,9 +221,8 @@ open class OcrMainLoop : MachineLearningLoop {
         guard mainLoopDelegate?.shouldUsePrediction(errorCorrectedNumber: errorCorrection.number, prediction: prediction) ?? true else { return nil }
         guard let result = errorCorrection.add(prediction: prediction) else { return nil }
         let delegate = mainLoopDelegate
-        if result.state == .finished && scanStats.success == nil {
-            scanStats.success = true
-            scanStats.endTime = Date()
+        if result.state == .finished && isSuccess == false {
+            isSuccess = true
             mainLoopDelegate = nil
         }
         DispatchQueue.main.async { [weak self] in

@@ -48,7 +48,6 @@
 		3B20EE222586550600CBF05E /* DetectedSSDOcrBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDE42586550600CBF05E /* DetectedSSDOcrBox.swift */; };
 		3B20EE242586550600CBF05E /* Image+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDE72586550600CBF05E /* Image+utils.swift */; };
 		3B20EE252586550600CBF05E /* InterfaceOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDE82586550600CBF05E /* InterfaceOrientation.swift */; };
-		3B20EE262586550600CBF05E /* ScanStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDE92586550600CBF05E /* ScanStats.swift */; };
 		3B20EE272586550600CBF05E /* OcrDDUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDEA2586550600CBF05E /* OcrDDUtils.swift */; };
 		3B20EE282586550600CBF05E /* AppleOcr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDEC2586550600CBF05E /* AppleOcr.swift */; };
 		3B20EE292586550600CBF05E /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDED2586550600CBF05E /* BlurView.swift */; };
@@ -115,7 +114,6 @@
 		3B20EDE42586550600CBF05E /* DetectedSSDOcrBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetectedSSDOcrBox.swift; sourceTree = "<group>"; };
 		3B20EDE72586550600CBF05E /* Image+utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+utils.swift"; sourceTree = "<group>"; };
 		3B20EDE82586550600CBF05E /* InterfaceOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceOrientation.swift; sourceTree = "<group>"; };
-		3B20EDE92586550600CBF05E /* ScanStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanStats.swift; sourceTree = "<group>"; };
 		3B20EDEA2586550600CBF05E /* OcrDDUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OcrDDUtils.swift; sourceTree = "<group>"; };
 		3B20EDEC2586550600CBF05E /* AppleOcr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleOcr.swift; sourceTree = "<group>"; };
 		3B20EDED2586550600CBF05E /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
@@ -214,7 +212,6 @@
 				3B20EDC12586550600CBF05E /* PriorsGen.swift */,
 				3B20EDE32586550600CBF05E /* ScanBaseViewController.swift */,
 				3B20EDD22586550600CBF05E /* ScanConfiguration.swift */,
-				3B20EDE92586550600CBF05E /* ScanStats.swift */,
 				3B20EDDB2586550600CBF05E /* ScanViewController.swift */,
 				3B20EDD72586550600CBF05E /* SimpleScanViewController.swift */,
 				3B20EDDC2586550600CBF05E /* SoftNMS.swift */,
@@ -413,7 +410,6 @@
 				3B20EE222586550600CBF05E /* DetectedSSDOcrBox.swift in Sources */,
 				3B20EE1E2586550600CBF05E /* SSDOcrOutputExtensions.swift in Sources */,
 				3B20EE1C2586550600CBF05E /* PredictionResult.swift in Sources */,
-				3B20EE262586550600CBF05E /* ScanStats.swift in Sources */,
 				3B20EE122586550600CBF05E /* CGRectExtension.swift in Sources */,
 				3B20EDF82586550600CBF05E /* AppleCreditCardOcr.swift in Sources */,
 				3B20EE052586550600CBF05E /* NMS.swift in Sources */,

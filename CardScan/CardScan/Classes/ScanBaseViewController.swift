@@ -59,7 +59,6 @@ public protocol TestingImageDataSource: AnyObject {
     
     //MARK: -Torch Logic
     public func toggleTorch() {
-        self.ocrMainLoop()?.scanStats.torchOn = !(self.ocrMainLoop()?.scanStats.torchOn ?? false)
         self.videoFeed.toggleTorch()
     }
     
@@ -78,12 +77,6 @@ public protocol TestingImageDataSource: AnyObject {
             print("Not a valid torch level")
         }
     }
-    
-//    @objc static public func configure(apiKey: String? = nil) {
-//        if let apiKey = apiKey {
-//            ApiClient.apiKey = apiKey
-//        }
-//    }
     
     @objc public static func supportedOrientationMaskOrDefault() -> UIInterfaceOrientationMask {
         guard ScanBaseViewController.isAppearing else {
@@ -172,7 +165,6 @@ public protocol TestingImageDataSource: AnyObject {
     }
 
     func permissionDidComplete(granted: Bool, showedPrompt: Bool) {
-        self.ocrMainLoop()?.scanStats.permissionGranted = granted
         if !granted {
             self.onCameraPermissionDenied(showedPrompt: showedPrompt)
         }
@@ -320,10 +312,6 @@ public protocol TestingImageDataSource: AnyObject {
         super.viewDidDisappear(animated)
         ScanBaseViewController.isAppearing = false
     }
-    
-//    public func getScanStats() -> ScanStats {
-//        return self.ocrMainLoop()?.scanStats ?? ScanStats()
-//    }
     
     open func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         if self.machineLearningSemaphore.wait(timeout: .now()) == .success {
