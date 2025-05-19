@@ -40,7 +40,6 @@
 		3B20EE182586550600CBF05E /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDDA2586550600CBF05E /* CornerView.swift */; };
 		3B20EE192586550600CBF05E /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDDB2586550600CBF05E /* ScanViewController.swift */; };
 		3B20EE1A2586550600CBF05E /* SoftNMS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDDC2586550600CBF05E /* SoftNMS.swift */; };
-		3B20EE1B2586550600CBF05E /* PredictionUtilOcr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDDD2586550600CBF05E /* PredictionUtilOcr.swift */; };
 		3B20EE1C2586550600CBF05E /* PredictionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDDE2586550600CBF05E /* PredictionResult.swift */; };
 		3B20EE1E2586550600CBF05E /* SSDOcrOutputExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDE02586550600CBF05E /* SSDOcrOutputExtensions.swift */; };
 		3B20EE1F2586550600CBF05E /* SSDOutputExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDE12586550600CBF05E /* SSDOutputExtensions.swift */; };
@@ -106,7 +105,6 @@
 		3B20EDDA2586550600CBF05E /* CornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		3B20EDDB2586550600CBF05E /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		3B20EDDC2586550600CBF05E /* SoftNMS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoftNMS.swift; sourceTree = "<group>"; };
-		3B20EDDD2586550600CBF05E /* PredictionUtilOcr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionUtilOcr.swift; sourceTree = "<group>"; };
 		3B20EDDE2586550600CBF05E /* PredictionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionResult.swift; sourceTree = "<group>"; };
 		3B20EDE02586550600CBF05E /* SSDOcrOutputExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDOcrOutputExtensions.swift; sourceTree = "<group>"; };
 		3B20EDE12586550600CBF05E /* SSDOutputExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSDOutputExtensions.swift; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 				3B20EDEA2586550600CBF05E /* OcrDDUtils.swift */,
 				3B20EDCB2586550600CBF05E /* OcrPriorsGen.swift */,
 				3B20EDDE2586550600CBF05E /* PredictionResult.swift */,
-				3B20EDDD2586550600CBF05E /* PredictionUtilOcr.swift */,
 				3B20EDC22586550600CBF05E /* PreviewView.swift */,
 				3B20EDC12586550600CBF05E /* PriorsGen.swift */,
 				3B20EDE32586550600CBF05E /* ScanBaseViewController.swift */,
@@ -385,7 +382,6 @@
 				3B20EE132586550600CBF05E /* Torch.swift in Sources */,
 				3B20EE162586550600CBF05E /* CardNetwork.swift in Sources */,
 				3B20EDF22586550600CBF05E /* VideoFeed.swift in Sources */,
-				3B20EE1B2586550600CBF05E /* PredictionUtilOcr.swift in Sources */,
 				3B20EE0E2586550600CBF05E /* UIImage+pixelBuffer.swift in Sources */,
 				3B20EE222586550600CBF05E /* DetectedSSDOcrBox.swift in Sources */,
 				3B20EE1E2586550600CBF05E /* SSDOcrOutputExtensions.swift in Sources */,
