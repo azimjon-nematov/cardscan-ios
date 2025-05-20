@@ -79,59 +79,12 @@ extension SSDOcrOutput {
         return (scoresTest, boxesTest, filterArray)
     }
     
-    func getBoxes() ->[[Float]] {
-        let pointer
-            = UnsafeMutablePointer<Float>(OpaquePointer(self.boxes.dataPointer))
-        let numOfRows = self.boxes.shape[3].intValue
-        let numOfCols = self.boxes.shape[4].intValue
-        
-        var boxesTest = [[Float]](
-            repeating: [Float](
-                repeating: 0.0,
-                count: numOfCols
-            ),
-            count: numOfRows
-        )
-        
-        for idx in 0..<self.boxes.count {
-            
-            let offset = idx * self.boxes.strides[4].intValue
-            boxesTest[idx/numOfCols][idx%numOfCols] = Float(pointer[offset])
-        }
-        return boxesTest
-    }
-    
-    func matrixReshape(_ nums: [[Float]], _ r: Int, _ c: Int) -> [[Float]] {
-        
-        var resultArray:[[Float]] = Array.init()
-        var elementArray:[Float] = Array.init()
-        var elementCount:Int = 0;
-        for firstArray in nums
-        {
-            for val in firstArray
-            {
-                elementArray.append(val)
-                if(elementArray.count>=c)
-                {
-                    resultArray.append(elementArray)
-                    elementArray.removeAll()
-                }
-                elementCount = elementCount+1
-            }
-        }
-        if(elementCount != r * c)
-        {
-            resultArray = nums
-        }
-        return resultArray
-    }
-    
     func convertLocationsToBoxes(
         locations: [[Float]],
         priors: [CGRect],
         centerVariance: Float,
         sizeVariance : Float
-    ) -> [[Float]] { //TODO: key: 123469
+    ) -> [[Float]] {
         
         /** Convert regressional location results of
          SSD into boxes in the form of (center_x, center_y, h, w)
@@ -148,23 +101,6 @@ extension SSDOcrOutput {
             boxes.append(box)
         }
         return boxes
-    }
-    
-    func centerFormToCornerForm(
-        regularBoxes: [[Float]]
-    ) -> [[Float]] {
-        
-        /** Convert center from (center_x, center_y, h, w) to
-         * corner form XMin, YMin, XMax, YMax
-         */
-        var cornerFormBoxes = regularBoxes
-        for i in 0..<regularBoxes.count {
-            for j in 0..<2{
-            cornerFormBoxes[i][j] = regularBoxes[i][j] - regularBoxes[i][j+2]/2
-            cornerFormBoxes[i][j+2] = regularBoxes[i][j] + regularBoxes[i][j+2]/2
-            }
-        }
-        return cornerFormBoxes
     }
    
     func filterScoresAndBoxes(

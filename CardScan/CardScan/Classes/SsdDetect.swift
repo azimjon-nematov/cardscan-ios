@@ -70,7 +70,7 @@ public struct SsdDetect {
         startTime = CFAbsoluteTimeGetCurrent()
         let normalizedScores = prediction.fasterSoftmax2D(scores)
         let regularBoxes = prediction.convertLocationsToBoxes(locations: boxes, priors: SsdDetect.priors ?? PriorsGen.combinePriors(), centerVariance: 0.1, sizeVariance: 0.2)
-        let cornerFormBoxes = prediction.centerFormToCornerForm(regularBoxes: regularBoxes)
+        let cornerFormBoxes = SSDOutput.centerFormToCornerForm(regularBoxes: regularBoxes)
 
         let result:Result = predictionAPI(scores:normalizedScores, boxes: cornerFormBoxes, probThreshold: SsdDetect.probThreshold, iouThreshold: SsdDetect.iouThreshold, candidateSize: SsdDetect.candidateSize, topK: SsdDetect.topK)
         endTime = CFAbsoluteTimeGetCurrent() - startTime

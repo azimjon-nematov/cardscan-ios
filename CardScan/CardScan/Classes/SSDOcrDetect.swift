@@ -93,7 +93,7 @@ struct SSDOcrDetect {
             centerVariance: centerVariance,
             sizeVariance: sizeVariance
         )
-        let cornerFormBoxes = prediction.centerFormToCornerForm(regularBoxes: regularBoxes)
+        let cornerFormBoxes = SSDOutput.centerFormToCornerForm(regularBoxes: regularBoxes)
         
         (scores, boxes) = prediction.filterScoresAndBoxes(
             scores: scores,

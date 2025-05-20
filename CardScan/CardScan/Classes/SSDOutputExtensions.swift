@@ -37,32 +37,6 @@ extension SSDOutput{
         }
         return boxesTest
     }
-
-    
-    func matrixReshape(_ nums: [[Float]], _ r: Int, _ c: Int) -> [[Float]] {
-        
-        var resultArray:[[Float]] = Array.init()
-        var elementArray:[Float] = Array.init()
-        var elementCount:Int = 0;
-        for firstArray in nums
-        {
-            for val in firstArray
-            {
-                elementArray.append(val)
-                if(elementArray.count>=c)
-                {
-                    resultArray.append(elementArray)
-                    elementArray.removeAll()
-                }
-                elementCount = elementCount+1
-            }
-        }
-        if(elementCount != r * c)
-        {
-            resultArray = nums
-        }
-        return resultArray
-    }
     
 
      func softmax(_ x: [Float]) -> [Float] {
@@ -95,7 +69,7 @@ extension SSDOutput{
         return normalizedScores
     }
     
-    func convertLocationsToBoxes(locations: [[Float]], priors: [CGRect], centerVariance: Float, sizeVariance : Float) -> [[Float]]{ //TODO: key: 123469
+    func convertLocationsToBoxes(locations: [[Float]], priors: [CGRect], centerVariance: Float, sizeVariance : Float) -> [[Float]]{
         
         /** Convert regressional location results of
          SSD into boxes in the form of (center_x, center_y, h, w)
@@ -103,16 +77,18 @@ extension SSDOutput{
         var boxes = [[Float]]()
         
         for i in 0..<locations.count{
-            let box = [locations[i][0] * centerVariance * Float(priors[i].height) + Float(priors[i].minX),
-                       locations[i][1] * centerVariance * Float(priors[i].width) + Float(priors[i].minY),
-                       exp(locations[i][2] * sizeVariance) * Float(priors[i].height),
-                       exp(locations[i][3] * sizeVariance) * Float(priors[i].width)]
+            let box = [
+                locations[i][0] * centerVariance * Float(priors[i].height) + Float(priors[i].minX),
+                locations[i][1] * centerVariance * Float(priors[i].width) + Float(priors[i].minY),
+                exp(locations[i][2] * sizeVariance) * Float(priors[i].height),
+                exp(locations[i][3] * sizeVariance) * Float(priors[i].width)
+            ]
             boxes.append(box)
         }
         
         return boxes
     }
-    func centerFormToCornerForm( regularBoxes: [[Float]]) -> [[Float]]{
+    static func centerFormToCornerForm( regularBoxes: [[Float]]) -> [[Float]]{
         
         /** Convert center from (center_x, center_y, h, w) to
          * corner form XMin, YMin, XMax, YMax
