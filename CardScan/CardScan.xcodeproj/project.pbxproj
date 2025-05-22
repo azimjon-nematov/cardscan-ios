@@ -52,7 +52,6 @@
 		3B20EE292586550600CBF05E /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDED2586550600CBF05E /* BlurView.swift */; };
 		3B20EE2B2586550600CBF05E /* SSDOcr.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EDEF2586550600CBF05E /* SSDOcr.mlmodel */; };
 		3B20EE48258655DC00CBF05E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B20EE42258655DC00CBF05E /* Assets.xcassets */; };
-		3B20EE4A258655DC00CBF05E /* CardScan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B20EE45258655DC00CBF05E /* CardScan.storyboard */; };
 		3B20EE54258658F900CBF05E /* SSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EE53258658F900CBF05E /* SSD.swift */; };
 		3B9F1588259C1F4C00881C1B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B9F158A259C1F4C00881C1B /* Localizable.strings */; };
 		F38B48B92673FD0C002CFB22 /* Array+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B48B82673FD0C002CFB22 /* Array+utils.swift */; };
@@ -117,7 +116,6 @@
 		3B20EDED2586550600CBF05E /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		3B20EDEF2586550600CBF05E /* SSDOcr.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SSDOcr.mlmodel; sourceTree = "<group>"; };
 		3B20EE42258655DC00CBF05E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3B20EE45258655DC00CBF05E /* CardScan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CardScan.storyboard; sourceTree = "<group>"; };
 		3B20EE53258658F900CBF05E /* SSD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSD.swift; sourceTree = "<group>"; };
 		3B9F1589259C1F4C00881C1B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B9F158E259C1FB600881C1B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -245,7 +243,6 @@
 			isa = PBXGroup;
 			children = (
 				3B20EE42258655DC00CBF05E /* Assets.xcassets */,
-				3B20EE45258655DC00CBF05E /* CardScan.storyboard */,
 				3B9F158A259C1F4C00881C1B /* Localizable.strings */,
 			);
 			path = Resources;
@@ -359,7 +356,6 @@
 			files = (
 				3B9F1588259C1F4C00881C1B /* Localizable.strings in Resources */,
 				3B20EE48258655DC00CBF05E /* Assets.xcassets in Resources */,
-				3B20EE4A258655DC00CBF05E /* CardScan.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
