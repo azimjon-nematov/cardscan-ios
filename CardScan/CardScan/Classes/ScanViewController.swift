@@ -13,7 +13,6 @@ import UIKit
 @objc public protocol ScanDelegate {
     @objc func userDidCancel(_ scanViewController: ScanViewController)
     @objc func userDidScanCard(_ scanViewController: ScanViewController, creditCard: CreditCard)
-    @objc optional func userDidScanQrCode(_ scanViewController: ScanViewController, payload: String)
     @objc func userDidSkip(_ scanViewController: ScanViewController)
 }
 
@@ -83,7 +82,6 @@ import UIKit
     @objc public weak var stringDataSource: ScanStringsDataSource?
     @objc public var allowSkip = false
     public var torchLevel: Float? 
-    public var scanQrCode = false
     public var navigationBarIsHidden = true
     @objc public var hideBackButtonImage = false
     @objc public var backButtonImage: UIImage?

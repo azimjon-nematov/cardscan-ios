@@ -160,11 +160,6 @@ extension ViewController: ScanDelegate {
         self.dismiss(animated: true)
         self.present(vc, animated: true)
     }
-    
-    func userDidScanQrCode(_ scanViewController: ScanViewController, payload: String) {
-        self.dismiss(animated: true)
-        print(payload)
-    }
 }
 
 @available(iOS 11.2, *)
