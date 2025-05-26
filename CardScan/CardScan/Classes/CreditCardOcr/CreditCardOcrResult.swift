@@ -20,9 +20,6 @@ public class CreditCardOcrResult {
         return Double(frames) / duration
     }
     
-    // this is only used by Card Verify and the Liveness check and filled in by the UxModel
-    public var hasCenteredCard: CenteredCardState?
-    
     init(mostRecentPrediction: CreditCardOcrPrediction, number: String, expiry: String?, name: String?, state: MainLoopState, duration: Double, frames: Int) {
         self.mostRecentPrediction = mostRecentPrediction
         self.number = number
@@ -42,7 +39,6 @@ public class CreditCardOcrResult {
     
     public static func finishedWithNonNumberSideCard(prediction: CreditCardOcrPrediction, duration: Double, frames: Int) -> CreditCardOcrResult {
         let result = CreditCardOcrResult(mostRecentPrediction: prediction, number: "", expiry: nil, name: nil, state: .finished, duration: duration, frames: frames)
-        result.hasCenteredCard = .nonNumberSide
         return result
     }
 }

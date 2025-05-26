@@ -8,34 +8,6 @@
 import CoreGraphics
 import Foundation
 
-public struct UxFrameConfidenceValues {
-    public let hasOcr: Bool
-    public let uxPan: Double
-    public let uxNoPan: Double
-    public let uxNoCard: Double
-    
-    public init(hasOcr: Bool, uxPan: Double, uxNoPan: Double, uxNoCard: Double) {
-        self.hasOcr = hasOcr
-        self.uxPan = uxPan
-        self.uxNoPan = uxNoPan
-        self.uxNoCard = uxNoCard
-    }
-    
-//    public func toArray() -> [Double] {
-//        return [hasOcr ? 1.0 : 0.0, uxPan, uxNoPan, uxNoCard]
-//    }
-}
-
-public enum CenteredCardState {
-    case numberSide
-    case nonNumberSide
-    case noCard
-    
-    public func hasCard() -> Bool {
-        return self == .numberSide || self == .nonNumberSide
-    }
-}
-
 public struct CreditCardOcrPrediction {
     public let image: CGImage
     public let ocrCroppingRectangle: CGRect
@@ -48,11 +20,7 @@ public struct CreditCardOcrPrediction {
     public let expiryBoxes: [CGRect]?
     public let nameBoxes: [CGRect]?
     
-    // this is only used by Card Verify and the Liveness check and filled in by the UxModel
-    public var centeredCardState: CenteredCardState?
-    public var uxFrameConfidenceValues: UxFrameConfidenceValues?
-    
-    public init(image: CGImage, ocrCroppingRectangle: CGRect, number: String?, expiryMonth: String?, expiryYear: String?, name: String?, computationTime: Double, numberBoxes: [CGRect]?, expiryBoxes: [CGRect]?, nameBoxes: [CGRect]?, centeredCardState: CenteredCardState? = nil, uxFrameConfidenceValues: UxFrameConfidenceValues? = nil) {
+    public init(image: CGImage, ocrCroppingRectangle: CGRect, number: String?, expiryMonth: String?, expiryYear: String?, name: String?, computationTime: Double, numberBoxes: [CGRect]?, expiryBoxes: [CGRect]?, nameBoxes: [CGRect]?) {
         
         self.image = image
         self.ocrCroppingRectangle = ocrCroppingRectangle
@@ -64,8 +32,6 @@ public struct CreditCardOcrPrediction {
         self.numberBoxes = numberBoxes
         self.expiryBoxes = expiryBoxes
         self.nameBoxes = nameBoxes
-        self.centeredCardState = centeredCardState
-        self.uxFrameConfidenceValues = uxFrameConfidenceValues
     }
     
     public static func emptyPrediction(cgImage: CGImage) -> CreditCardOcrPrediction {
