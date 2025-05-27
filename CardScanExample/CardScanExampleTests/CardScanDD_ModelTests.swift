@@ -24,7 +24,6 @@ class CardScanDD_ModelTests: XCTestCase {
     
     func testModelLoading() {
         let ssdOcr = SSDOcrDetect()
-        ssdOcr.warmUp()
         XCTAssert(ssdOcr.ssdOcrModel != nil)
     }
 
@@ -32,14 +31,12 @@ class CardScanDD_ModelTests: XCTestCase {
         // first try it with a non existant resource
         SSDOcrDetect.ssdOcrResource = "randomtext"
         let ssdOcr = SSDOcrDetect()
-        ssdOcr.warmUp()
         XCTAssert(ssdOcr.ssdOcrModel == nil)
     }
 
     func testModelThrowingAndHandlingExceptions() {
 
         var ssdOcr = SSDOcrDetect()
-        ssdOcr.warmUp()
 
         let imageWidth = ssdOcr.ssdOcrImageWidth
         let imageHeight = ssdOcr.ssdOcrImageHeight

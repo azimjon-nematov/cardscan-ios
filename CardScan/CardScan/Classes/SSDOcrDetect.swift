@@ -37,27 +37,6 @@ struct SSDOcrDetect {
     var lastDetectedBoxes: [CGRect] = []
     static var hasPrintedInitError = false
     
-    func warmUp() {
-        SSDOcrDetect.initializeModels()
-        UIGraphicsBeginImageContext(CGSize(width: ssdOcrImageWidth,
-                                           height: ssdOcrImageHeight))
-        UIColor.white.setFill()
-        UIRectFill(CGRect(x: 0, y: 0, width: ssdOcrImageWidth,
-                                      height: ssdOcrImageHeight))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        guard let ssdOcrModel = ssdOcrModel else{
-            print("OCR Model not initialized")
-            return
-        }
-        if let pixelBuffer = newImage?.pixelBuffer(width: ssdOcrImageWidth,
-                                                   height: ssdOcrImageHeight){
-            let input = SSDOcrInput(_0: pixelBuffer)
-            let _ = try? ssdOcrModel.prediction(input: input)
-        }
-    }
-    
     public init() {
         if SSDOcrDetect.priors == nil{
             SSDOcrDetect.priors = OcrPriorsGen.combinePriors()

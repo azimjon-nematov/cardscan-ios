@@ -24,7 +24,6 @@ class CardScanDD_BackgroundTests: XCTestCase {
 
     func testBackgroundTextDigits(){
         var ssdOcr = SSDOcrDetect()
-        ssdOcr.warmUp()
 
         let imageWidth = ssdOcr.ssdOcrImageWidth
         let imageHeight = ssdOcr.ssdOcrImageHeight
@@ -39,7 +38,6 @@ class CardScanDD_BackgroundTests: XCTestCase {
 
     func testBackgroundScreen(){
         var ssdOcr = SSDOcrDetect()
-        ssdOcr.warmUp()
 
         let imageWidth = ssdOcr.ssdOcrImageWidth
         let imageHeight = ssdOcr.ssdOcrImageHeight
@@ -54,7 +52,6 @@ class CardScanDD_BackgroundTests: XCTestCase {
 
     func testBackgroundDesk(){
         var ssdOcr = SSDOcrDetect()
-        ssdOcr.warmUp()
 
         let imageWidth = ssdOcr.ssdOcrImageWidth
         let imageHeight = ssdOcr.ssdOcrImageHeight
@@ -69,7 +66,6 @@ class CardScanDD_BackgroundTests: XCTestCase {
 
     func testBackgroundWindown(){
         var ssdOcr = SSDOcrDetect()
-        ssdOcr.warmUp()
 
         let imageWidth = ssdOcr.ssdOcrImageWidth
         let imageHeight = ssdOcr.ssdOcrImageHeight
@@ -84,7 +80,6 @@ class CardScanDD_BackgroundTests: XCTestCase {
 
     func testBackgroundSpaceGray(){
         var ssdOcr = SSDOcrDetect()
-        ssdOcr.warmUp()
 
         let imageWidth = ssdOcr.ssdOcrImageWidth
         let imageHeight = ssdOcr.ssdOcrImageHeight
