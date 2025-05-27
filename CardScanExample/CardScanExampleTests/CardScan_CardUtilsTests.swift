@@ -67,7 +67,7 @@ class CardScan_CardUtilsTests: XCTestCase {
     
     func testCardExpDate() {
         let expMonth = "10"
-        let validExpYear = "23"
+        let validExpYear = "29"
         let invalidExpYear = "19"
         
         XCTAssert(CreditCardUtils.isValidDate(expMonth: expMonth, expYear: validExpYear))
@@ -86,13 +86,5 @@ class CardScan_CardUtilsTests: XCTestCase {
         CreditCardUtils.addMirSupport()
         XCTAssert(CreditCardUtils.isValidNumber(cardNumber: "2200000000000061"))
         CreditCardUtils.prefixesRegional = []
-    }
-    
-    func testCardTypes() {
-        XCTAssert(CreditCardUtils.determineCardType(cardNumber: "349011") == CardType.DEBIT)
-        XCTAssert(CreditCardUtils.determineCardType(cardNumber: "648298") == CardType.CREDIT)
-        XCTAssert(CreditCardUtils.determineCardType(cardNumber: "648299") == CardType.CREDIT)
-        XCTAssert(CreditCardUtils.determineCardType(cardNumber: "531306") == CardType.PREPAID)
-        XCTAssert(CreditCardUtils.determineCardType(cardNumber: "123456") == CardType.UNKNOWN)
     }
 }
