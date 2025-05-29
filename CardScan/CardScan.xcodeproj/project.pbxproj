@@ -53,18 +53,7 @@
 		3B20EE54258658F900CBF05E /* SSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B20EE53258658F900CBF05E /* SSD.swift */; };
 		3B9F1588259C1F4C00881C1B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B9F158A259C1F4C00881C1B /* Localizable.strings */; };
 		F38B48B92673FD0C002CFB22 /* Array+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38B48B82673FD0C002CFB22 /* Array+utils.swift */; };
-		F3FB36702640BEC10010382C /* CardScan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B20ED9C2586539600CBF05E /* CardScan.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F3FB36712640BEC10010382C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B20ED932586539600CBF05E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3B20ED9B2586539600CBF05E;
-			remoteInfo = CardScan;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3B15C14E259C326A005A394A /* String+localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localization.swift"; sourceTree = "<group>"; };
@@ -117,7 +106,6 @@
 		3B9F158E259C1FB600881C1B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B9F1592259C1FD600881C1B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F38B48B82673FD0C002CFB22 /* Array+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+utils.swift"; sourceTree = "<group>"; };
-		F3FB366B2640BEC10010382C /* CardScanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardScanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,14 +113,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F3FB36682640BEC10010382C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F3FB36702640BEC10010382C /* CardScan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				3B20ED9C2586539600CBF05E /* CardScan.framework */,
-				F3FB366B2640BEC10010382C /* CardScanTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -274,24 +253,6 @@
 			productReference = 3B20ED9C2586539600CBF05E /* CardScan.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F3FB366A2640BEC10010382C /* CardScanTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F3FB36752640BEC10010382C /* Build configuration list for PBXNativeTarget "CardScanTests" */;
-			buildPhases = (
-				F3FB36672640BEC10010382C /* Sources */,
-				F3FB36682640BEC10010382C /* Frameworks */,
-				F3FB36692640BEC10010382C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F3FB36722640BEC10010382C /* PBXTargetDependency */,
-			);
-			name = CardScanTests;
-			productName = CardScanTests;
-			productReference = F3FB366B2640BEC10010382C /* CardScanTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -304,9 +265,6 @@
 				TargetAttributes = {
 					3B20ED9B2586539600CBF05E = {
 						CreatedOnToolsVersion = 12.2;
-					};
-					F3FB366A2640BEC10010382C = {
-						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
@@ -338,7 +296,6 @@
 			projectRoot = "";
 			targets = (
 				3B20ED9B2586539600CBF05E /* CardScan */,
-				F3FB366A2640BEC10010382C /* CardScanTests */,
 			);
 		};
 /* End PBXProject section */
@@ -350,13 +307,6 @@
 			files = (
 				3B9F1588259C1F4C00881C1B /* Localizable.strings in Resources */,
 				3B20EE48258655DC00CBF05E /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F3FB36692640BEC10010382C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,22 +363,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3FB36672640BEC10010382C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F3FB36722640BEC10010382C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3B20ED9B2586539600CBF05E /* CardScan */;
-			targetProxy = F3FB36712640BEC10010382C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3B9F158A259C1F4C00881C1B /* Localizable.strings */ = {
@@ -620,44 +555,6 @@
 			};
 			name = Release;
 		};
-		F3FB36732640BEC10010382C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N9W3XYXA6D;
-				INFOPLIST_FILE = CardScanTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.itservice.CardScanTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		F3FB36742640BEC10010382C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N9W3XYXA6D;
-				INFOPLIST_FILE = CardScanTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.itservice.CardScanTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -675,15 +572,6 @@
 			buildConfigurations = (
 				3B20EDA52586539600CBF05E /* Debug */,
 				3B20EDA62586539600CBF05E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F3FB36752640BEC10010382C /* Build configuration list for PBXNativeTarget "CardScanTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F3FB36732640BEC10010382C /* Debug */,
-				F3FB36742640BEC10010382C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
