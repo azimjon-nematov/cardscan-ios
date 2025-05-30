@@ -52,7 +52,7 @@ class CardScanDD_ModelTests: XCTestCase {
 
         let pixelBuffer = newImage.pixelBuffer(width: imageHeight, height: imageWidth)!
         XCTAssertThrowsError(try ssdOcr.ssdOcrModel!.prediction(_0: pixelBuffer)) { error in
-            XCTAssert(error.localizedDescription == "Input image feature 0 does not match model description")
+            XCTAssert(/*in real device*/ error.localizedDescription == "Input image feature 0 does not match model description" || /*in Simulator*/ error.localizedDescription == "Image size 375 x 600 not in allowed set of image sizes")
         }
 
         // test whether we can handle exceptions
