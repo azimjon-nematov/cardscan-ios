@@ -136,14 +136,6 @@ public protocol TestingImageDataSource: AnyObject {
         }
     }
     
-    @objc static public func cameraImage() -> UIImage? {
-        guard let bundle = CSBundle.bundle() else {
-            return nil
-        }
-        
-        return UIImage(named: "camera", in: bundle, compatibleWith: nil)
-    }
-    
     public func cancelScan() {
         guard let ocrMainLoop = ocrMainLoop()  else {
             return

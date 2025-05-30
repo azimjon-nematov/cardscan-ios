@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.cameraImage.image = ScanViewController.cameraImage()
+        self.cameraImage.image = UIImage(named: "camera")
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -82,7 +82,7 @@ class ViewController: UIViewController {
         vc.skipButtonFont = UIFont(name: "Chalkduster", size: CGFloat(17.0))
         
         vc.cornerColor = UIColor.blue
-        vc.torchButtonImage = ScanViewController.cameraImage()
+        vc.torchButtonImage = UIImage(named: "camera")
 
         vc.torchButtonSize = CGSize(width: 44, height: 44)
         
